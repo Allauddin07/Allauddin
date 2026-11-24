@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Link Maker</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #faf5ef; margin: 0; padding: 20px; color: #333; }
+  .box { max-width: 420px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.1); }
+  h2 { margin-top: 0; text-align: center; }
+  label { display: block; margin: 14px 0 4px; font-weight: bold; }
+  input { width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+  button { width: 100%; margin-top: 18px; padding: 12px; font-size: 16px; border: 0; border-radius: 6px; background: #b8860b; color: #fff; cursor: pointer; }
+  button.secondary { background: #444; margin-top: 8px; }
+  #result { display: none; margin-top: 20px; }
+  #link { word-break: break-all; background: #f3f3f3; padding: 10px; border-radius: 6px; font-size: 14px; }
+  #msg { color: green; text-align: center; margin-top: 8px; min-height: 18px; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h2>Guest Link Maker</h2>
+
+  <label for="first">First name</label>
+  <input id="first" type="text" placeholder="Shahabuddin">
+
+  <label for="last">Last name</label>
+  <input id="last" type="text" placeholder="Ansari">
+
+  <button onclick="makeLink()">Generate link</button>
+
+  <div id="result">
+    <label>Your link</label>
+    <div id="link"></div>
+    <button class="secondary" onclick="copyLink()">Copy link</button>
+    <button class="secondary" onclick="shareWhatsApp()">Send on WhatsApp</button>
+    <div id="msg"></div>
+  </div>
+</div>
+
+<script>
+  var BASE = "https://allauddin07.github.io/Allauddin/wedding-invitation.html";
+  var current = "";
+
+  function makeLink() {
+    var first = document.getElementById("first").value.trim();
+    var last = document.getElementById("last").value.trim();
+    var name = (first + " " + last).trim();
+    if (!first) { alert("Please enter first name"); return; }
+    current = BASE + "?guest=" + encodeURIComponent(name);
+    document.getElementById("link").textContent = current;
+    document.getElementById("result").style.display = "block";
+    document.getElementById("msg").textContent = "";
+  }
+
+  function copyLink() {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(current).then(function () {
+        document.getElementById("msg").textContent = "Copied!";
+      });
+    } else {
+      var t = document.createElement("textarea");
+      t.value = current; document.body.appendChild(t); t.select();
+      document.execCommand("copy"); document.body.removeChild(t);
+      document.getElementById("msg").textContent = "Copied!";
+    }
+  }
+
+  function shareWhatsApp() {
+    window.open("https://wa.me/?text=" + encodeURIComponent("You are invited! " + current), "_blank");
+  }
+</script>
+</body>
+</html>
