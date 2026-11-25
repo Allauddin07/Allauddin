@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a2e23">
-<title>Allauddin &amp; Noori Parveen — Wedding Invitation</title>
+<title>[PREVIEW] Allauddin &amp; Noori Parveen — Wedding Invitation</title>
 <meta name="description" content="With the blessings of Allah, you are warmly invited to the wedding of Allauddin & Noori Parveen.">
 <!-- Open Graph tags give a nice preview card when the link is shared on WhatsApp -->
 <meta property="og:title" content="Allauddin & Noori Parveen — Wedding Invitation">
@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
    1. DESIGN TOKENS
@@ -253,17 +254,47 @@ body.opened .hero .shimmer-once,
 @keyframes sealPulse { 50% { transform: scale(1.05); } }
 @keyframes ring { from { transform: scale(1); opacity: .8; } to { transform: scale(1.55); opacity: 0; } }
 
+/* "Tap to Open" — a gold pill that floats, shimmers and pulses so guests know to tap */
 .tap-hint {
-  position: absolute; left: 50%; top: calc(45% + 62px); z-index: 3;
+  position: absolute; left: 50%; top: calc(45% + 64px); z-index: 3;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
   transform: translateX(-50%);
-  padding: 7px 18px; border-radius: 999px;
-  background: rgba(6,38,29,.8); border: 1px solid rgba(201,162,58,.6);
-  color: var(--gold-light); font-size: .85rem; font-weight: 600; letter-spacing: .25em; text-transform: uppercase;
-  white-space: nowrap;
-  animation: hintPulse 2.8s ease-in-out infinite;
+  animation: hintFloat 2.6s ease-in-out infinite;
   transition: opacity .4s ease;
+  pointer-events: none;
 }
-@keyframes hintPulse { 0%, 100% { opacity: .6; } 50% { opacity: 1; } }
+.tap-hint .chev { /* little chevron pointing up at the seal */
+  width: 18px; height: 18px; color: var(--gold-light);
+  filter: drop-shadow(0 0 4px rgba(236,212,138,.8));
+  animation: chevNudge 1.3s ease-in-out infinite;
+}
+.tap-hint .pill {
+  position: relative; isolation: isolate;
+  padding: 10px 24px 11px; border-radius: 999px;
+  background: linear-gradient(135deg, #fff1bf 0%, var(--gold-light) 25%, var(--gold) 60%, var(--gold-dark) 100%);
+  border: 1px solid #fff4cf;
+  color: var(--emerald-900); font-size: .95rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45), 0 0 22px rgba(236,212,138,.55), inset 0 1px 0 rgba(255,255,255,.7);
+}
+.tap-hint .shine { /* clips the light sweep to the pill */
+  position: absolute; inset: 0; border-radius: inherit; overflow: hidden; z-index: -1;
+}
+.tap-hint .shine::before { /* light sweeping across the gold */
+  content: ""; position: absolute; top: -20%; bottom: -20%; width: 45%; left: -60%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.85), transparent);
+  transform: skewX(-20deg);
+  animation: hintShine 2.6s ease-in-out infinite;
+}
+.tap-hint .pill::after { /* soft gold ring pulsing outwards */
+  content: ""; position: absolute; inset: -3px; border-radius: inherit; z-index: -2;
+  border: 2px solid rgba(236,212,138,.9);
+  animation: hintRing 2.6s ease-out infinite;
+}
+@keyframes hintFloat { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -6px); } }
+@keyframes chevNudge { 0%, 100% { transform: translateY(0); opacity: .7; } 50% { transform: translateY(-4px); opacity: 1; } }
+@keyframes hintShine { 0%, 35% { left: -60%; } 75%, 100% { left: 120%; } }
+@keyframes hintRing { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(1.35, 1.8); opacity: 0; } }
 
 /* a. Seal glows on tap */
 #intro.tapped .seal {
@@ -471,7 +502,11 @@ body.opened .seq { opacity: 1; transform: none; }
   font-family: var(--font-ruqaa); font-weight: 400;
   font-size: clamp(2rem, 9.5vw, 3rem); line-height: 1.9; margin: 0; padding: 0 34px;
 }
-.bismillah-en { font-style: italic; color: var(--gold-light); margin: 0 0 34px; font-size: 1.05rem; padding: 0 38px; }
+/* Brighter, luminous gold for the Bismillah, with a soft golden glow */
+.bismillah.gold-text {
+  background-image: linear-gradient(100deg, #fff6d6 0%, #ffe9a8 18%, #f3cf6a 34%, #fffbe8 50%, #f3cf6a 64%, #fff6d6 66.7%, #ffe9a8 80%, #f3cf6a 92%, #fff6d6 100%);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 120, .55)) drop-shadow(0 1px 1px rgba(0, 0, 0, .35));
+}.bismillah-en { font-style: italic; color: var(--gold-light); margin: 0 0 34px; font-size: 1.05rem; padding: 0 38px; }
 
 /* Mihrab-arch photo frames */
 .portrait { display: flex; justify-content: center; gap: 14px; margin: 0 auto 26px; }
@@ -895,7 +930,58 @@ html.failsafe .quickbar { opacity: 1; }
 section{
   margin-bottom: 1rem !important;
 }
-</style>
+
+/* =========================================================
+   PREVIEW THEME — colours, section bands and body font from index.html
+   (everything below only overrides; delete this block to go back)
+   ========================================================= */
+:root {
+  --emerald-900: #031d1a;  --emerald-800: #062e28;  --emerald-700: #073b32;
+  --emerald-600: #0b342c;  --emerald-500: #12453a;
+  --gold: #c8a760;  --gold-light: #eed9a0;  --gold-pale: #f4e6c4;  --gold-dark: #a3843f;  --gold-deep: #7d6328;
+  --ivory: #f5eedf;  --ivory-2: #f5eedf;  --ink: #073b32;  --ink-soft: #55665e;
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+}
+body { font-size: 1rem; font-weight: 400; line-height: 1.7; background: var(--emerald-900); }
+.bg { background: radial-gradient(ellipse at 50% 0%, rgba(200,167,96,.08), transparent 55%), linear-gradient(180deg, #062e28, #031d1a); }
+/* Headings & lyrical lines stay in the elegant serif; body copy, labels and buttons use DM Sans */
+.section-title, .event h3, .venue-name, .hosts .host-name, .family .parent, .dear, .invite-line,
+.personal-msg, .ayah-en, .bismillah-en, .gift, .dua-tr, .g-caption, .countdown-note, .hero-date { font-family: var(--serif); }
+.section-title { font-weight: 500; letter-spacing: .1em; font-size: clamp(1.6rem, 6.6vw, 2rem); }
+.eyebrow, .unit small, .host-rel, .family .rel, .ayah-ref { font-family: var(--font-body); font-size: .68rem; letter-spacing: .27em; font-weight: 500; }
+.dear { font-size: clamp(1.6rem, 7vw, 2rem); }
+.personal-msg, .invite-line { font-size: 1.25rem; }
+
+/* Ivory cards become full-width cream bands (edge to edge, no rounded card) */
+section > .card {
+  margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+  border-radius: 0 !important; border: 0; box-shadow: none;
+  padding: 64px max(24px, calc(50vw - 250px)) !important;
+  background: var(--ivory);
+}
+section > .card::before { display: none; }
+section > .card .card-pattern { opacity: .035; border-radius: 0; }
+section > .card .section-title { color: var(--ink); }
+.card p { color: var(--ink-soft); }
+
+/* Event cards: tall thin-gold arches on deep green (like index.html) */
+.events .event.card {
+  background: linear-gradient(160deg, rgba(18,69,52,.38), #092d27);
+  color: var(--ivory); border: 1px solid rgba(189,161,91,.4); box-shadow: none;
+  border-radius: 120px 120px 4px 4px;
+}
+.events .event.card::before { display: none; }
+.events .event.card h3 { color: #f0e4c6; font-weight: 500; letter-spacing: .14em; }
+.events .event .date { color: var(--gold-light); }
+.events .event .time { color: #ddcfaf; }
+.events .event .note { color: #9fb8a6; }
+#eventsSection { background: #0b342c; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 64px max(20px, calc(50vw - 260px)) !important; }
+
+/* Buttons: square-ish, letter-spaced, thinner */
+.btn { border-radius: 4px; font-family: var(--font-body); font-weight: 600; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
+.btn.dark-ghost { background: transparent; border: 1px solid rgba(200,167,96,.55); color: var(--gold-light); }
+.field label, .field legend { font-family: var(--font-body); font-weight: 600; font-size: .95rem; }</style>
 </head>
 <body class="locked">
 <!-- =========================================================
@@ -961,7 +1047,8 @@ section{
   <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5l11 7-11 7z"/></symbol>
 </svg>
 
-<noscript><style>#intro{display:none}body.locked{overflow:auto;height:auto}</style></noscript>
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>#intro{display:none}body.locked{overflow:auto;height:auto}</style></noscript>
 
 <div class="bg" aria-hidden="true"><div class="stars" id="bgStars"></div></div>
 
@@ -982,7 +1069,10 @@ section{
     <button class="seal" id="openBtn" type="button" aria-label="Tap to open the invitation">
       <svg aria-hidden="true"><use href="#i-crescent"/></svg>
     </button>
-    <div class="tap-hint" aria-hidden="true">Tap to Open</div>
+    <div class="tap-hint" aria-hidden="true">
+      <svg class="chev" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="pill"><span class="shine"></span>Tap to Open</span>
+    </div>
   </div>
 </div>
 
@@ -1170,7 +1260,7 @@ section{
   </section>
 
   <!-- 12. Closing dua + 13. Share -->
-  <section class="reveal" data-anim="unfold" id="closingSection" aria-labelledby="duaHeading">
+  <section class="reveal" data-anim="unfold" id="closingSection" aria-labelledby="duaHeading" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">
     <div class="card">
       <div class="card-pattern" aria-hidden="true"></div>
       <h2 id="duaHeading" class="section-title">A Dua for the Couple</h2>
@@ -1297,7 +1387,7 @@ const CONFIG = {
                                            // auto: couple.jpg if it exists, else groom.jpg + bride.jpg if both exist
     // Full-length portrait of the groom (original: Groom.png; web copy re-saved as JPEG for speed)
     mainPortrait:  { src: 'images/Groom-web.jpeg', alt: 'Allauddin in his wedding sherwani', focus: '50% 4%' },
-    groomPortrait: { src: 'images/groom.jpg',  alt: 'Allauddin',                    focus: '50% 25%' },
+    groomPortrait: { src: 'images/groom-web.jpeg',  alt: 'Allauddin',                    focus: '50% 25%' },
     bridePortrait: { src: 'images/bride.jpg',  alt: 'Noori Parveen',                focus: '50% 25%' },
     // galleryPhotos: [
     //   // Add or remove lines to change the number of photos. `full` (optional) = larger file for the zoom view.
@@ -2412,6 +2502,84 @@ const CONFIG = {
   $('#shareBtn').addEventListener('click', share);
 
   window.__inviteReady = true;
+})();
+</script>
+
+<!-- =========================================================
+     PREVIEW: golden "swipe up to explore" hint (self-contained block)
+     Appears shortly after the doors open; hides on the first scroll.
+     ========================================================= -->
+<style>
+.scroll-hint {
+  position: fixed; z-index: 95; left: 50%; bottom: calc(92px + var(--safe-b));
+  display: flex; flex-direction: row; align-items: center; gap: 10px; white-space: nowrap;
+  padding: 7px 18px 7px 12px; border-radius: 999px; cursor: pointer;
+  background: rgba(3, 29, 26, .8); border: 1px solid rgba(200, 167, 96, .65);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .45), 0 0 18px rgba(236, 212, 138, .25);
+  color: var(--gold-light); font: 600 .72rem/1.2 var(--font-body); letter-spacing: .2em; text-transform: uppercase;
+  opacity: 0; transform: translate(-50%, 16px); pointer-events: none;
+  transition: opacity .7s ease, transform .7s var(--ease-out);
+}
+.scroll-hint.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.scroll-hint .track { position: relative; width: 26px; height: 34px; flex: none; }
+.scroll-hint .trail { /* faint gold line the finger travels along */
+  position: absolute; left: 50%; top: 2px; bottom: 6px; width: 2px; margin-left: -1px; border-radius: 2px;
+  background: linear-gradient(transparent, rgba(236, 212, 138, .7));
+  transform-origin: bottom; animation: hintTrail 1.8s ease-in-out infinite;
+}
+.scroll-hint svg {
+  position: absolute; left: 50%; bottom: -4px; width: 26px; height: 26px; margin-left: -10px;
+  color: #f3cf6a; filter: drop-shadow(0 0 6px rgba(255, 215, 120, .7));
+  animation: hintSwipe 1.8s ease-in-out infinite;
+}
+@keyframes hintSwipe {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 1; }
+  60%  { transform: translateY(-10px); opacity: 1; }
+  85%, 100% { transform: translateY(-10px); opacity: 0; }
+}
+@keyframes hintTrail { 0%, 15% { transform: scaleY(0); opacity: 0; } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .scroll-hint svg { opacity: 1; } }
+</style>
+<button class="scroll-hint" id="scrollHint" type="button" aria-label="Scroll down to see the wedding details">
+  <span class="track" aria-hidden="true">
+    <span class="trail"></span>
+    <!-- golden pointing hand -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 13V4.5a1.5 1.5 0 0 1 3 0V11"/>
+      <path d="M12 10.5a1.5 1.5 0 0 1 3 0V12"/>
+      <path d="M15 11.5a1.5 1.5 0 0 1 3 0v1"/>
+      <path d="M18 13a1.5 1.5 0 0 1 3 0v2.8c0 3.4-2.7 6.2-6.1 6.2h-1.2a5.8 5.8 0 0 1-4.6-2.3L5.6 15.9a1.7 1.7 0 0 1 2.6-2.2L9 14.6"/>
+    </svg>
+  </span>
+  <span id="scrollHintText">Swipe up to explore</span>
+</button>
+<script>
+(() => {
+  const hint = document.getElementById('scrollHint');
+  if (!hint) return;
+  // Mouse users read "Scroll", touch users read "Swipe up"
+  if (!matchMedia('(pointer: coarse)').matches) document.getElementById('scrollHintText').textContent = 'Scroll to explore';
+  let shown = false, done = false, timer;
+  const hide = () => { if (done) return; done = true; hint.classList.remove('show'); clearTimeout(timer); setTimeout(() => hint.remove(), 800); };
+  const show = () => {
+    if (done || shown || window.scrollY > 60) return;
+    shown = true; hint.classList.add('show');
+    timer = setTimeout(hide, 14000);            // fades away by itself after a while
+  };
+  // Wait for the doors to finish opening, then a short pause so the hero is seen first
+  const watch = new MutationObserver(() => {
+    if (document.body.classList.contains('opened')) { watch.disconnect(); setTimeout(show, 2200); }
+  });
+  watch.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  window.addEventListener('scroll', () => { if (window.scrollY > 60) hide(); }, { passive: true });
+  // Tapping the hint gently scrolls down to the next section
+  hint.addEventListener('click', () => {
+    const next = document.querySelector('#hero + section') || document.querySelector('main section:nth-of-type(2)');
+    hide();
+    if (next) next.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  });
 })();
 </script>
 </body>

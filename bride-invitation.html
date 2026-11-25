@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a2e23">
+<title>Noori Parveen &amp; Allauddin — Wedding Invitation (Bride's Family)</title>
+<meta name="description" content="With the blessings of Allah, you are warmly invited to the wedding of Noori Parveen & Allauddin.">
+<!-- Open Graph tags give a nice preview card when the link is shared on WhatsApp -->
+<meta property="og:title" content="Noori Parveen & Allauddin — Wedding Invitation">
+<meta property="og:description" content="With the blessings of Allah, we joyfully invite you. Nikah: Sunday, 23 May 2027.">
+<meta property="og:type" content="website">
+
+<!-- Mark JS as available so content is only hidden for animation when scripts run -->
+<script>document.documentElement.classList.add('js');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+:root {
+  --emerald-900: #06261d;
+  --emerald-800: #0a2e23;
+  --emerald-700: #0b3d2e;
+  --emerald-600: #0f5240;
+  --emerald-500: #16694f;
+  --gold: #c9a23a;          /* antique gold */
+  --gold-light: #ecd48a;
+  --gold-pale: #fbefc6;
+  --gold-dark: #9c7a26;
+  --gold-deep: #6f5312;
+  --ivory: #fbf6ea;
+  --ivory-2: #f3ead4;
+  --ink: #2b2a25;
+  --ink-soft: #57524a;
+
+  --font-arabic: 'Amiri', serif;
+  --font-ruqaa: 'Aref Ruqaa', 'Amiri', serif;
+  --font-script: 'Great Vibes', cursive;           /* couple's names only */
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  /* Guest names may be in any language — fall back to fonts that cover more scripts */
+  --font-guest: 'Cormorant Garamond', 'Amiri', 'Noto Serif', 'Nirmala UI', 'Segoe UI', system-ui, serif;
+
+  --radius: 18px;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-soft: cubic-bezier(.45, 0, .2, 1);
+  --ease-door: cubic-bezier(.6, .02, .25, 1);
+
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+
+  /* Restrained 8-point star tile (gold, used at low opacity) */
+  --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23c9a23a' stroke-width='1'%3E%3Crect x='18' y='18' width='28' height='28'/%3E%3Crect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/%3E%3Ccircle cx='32' cy='32' r='6'/%3E%3Cpath d='M0 0L18 18M64 0L46 18M0 64L18 46M64 64L46 46M32 0V12M32 64V52M0 32H12M64 32H52'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* Metallic gold gradient. The left and right thirds match, so a one-time
+     sweep from 100% to 0% passes a highlight and settles on the same look. */
+  --gold-grad: linear-gradient(100deg, #ecd48a 0%, #c9a23a 12%, #9c7a26 26%, #c9a23a 34%, #fff4cf 50%, #c9a23a 64%, #ecd48a 66.7%, #c9a23a 78.7%, #9c7a26 92.7%, #c9a23a 100%);
+  --gold-grad-dark: linear-gradient(100deg, #b8902c 0%, #9c7a26 12%, #6f5312 26%, #9c7a26 34%, #e2bf5c 50%, #9c7a26 64%, #b8902c 66.7%, #9c7a26 78.7%, #6f5312 92.7%, #9c7a26 100%);
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+@supports (overflow: clip) { html { overflow-x: clip; } }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--ivory);
+  background: var(--emerald-800);
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums;
+}
+body.locked { overflow: hidden; height: 100vh; height: 100svh; }
+img { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: inherit; }
+p { margin: 0 0 .8em; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+[tabindex="-1"]:focus { outline: none; }
+[hidden] { display: none !important; }
+
+/* Arabic: large, readable, right-to-left, centred */
+[lang="ar"] { direction: rtl; unicode-bidi: isolate; text-align: center; }
+
+/* Fixed decorative background */
+.bg {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201,162,58,.12), transparent 55%),
+    linear-gradient(180deg, var(--emerald-700), var(--emerald-900));
+}
+.bg::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: var(--pattern); background-size: 64px 64px; opacity: .05;
+}
+.stars { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.star {
+  position: absolute; width: 2px; height: 2px; border-radius: 50%;
+  background: var(--gold-pale);
+  box-shadow: 0 0 5px rgba(251,239,198,.7);
+  opacity: .25;
+  animation: twinkle var(--d, 4s) ease-in-out var(--delay, 0s) infinite;
+}
+@keyframes twinkle { 0%, 100% { opacity: .15; } 50% { opacity: .75; } }
+
+/* Gold text — static metallic finish; names get a one-time shimmer */
+.gold-text {
+  background-image: var(--gold-grad);
+  background-size: 300% 100%;
+  background-position: 0% 0;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.gold-text.on-light { background-image: var(--gold-grad-dark); }
+@keyframes shimmerOnce { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+body.opened .hero .shimmer-once,
+.visible .shimmer-once { animation: shimmerOnce 2.6s var(--ease-soft) 1.1s 1 both; }
+
+/* =========================================================
+   3. INTRO — GUEST NAME + CLOSED DOORS
+   ========================================================= */
+#intro {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: clamp(14px, 3vh, 28px);
+  padding: calc(16px + var(--safe-t)) calc(16px + var(--safe-r)) calc(16px + var(--safe-b)) calc(16px + var(--safe-l));
+  background: radial-gradient(ellipse at 50% 50%, #0f4a3a 0%, #082a21 55%, #041610 100%);
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity .9s var(--ease-soft), visibility .9s;
+  -webkit-tap-highlight-color: transparent;
+}
+#intro::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: var(--pattern); background-size: 56px 56px; opacity: .04;
+}
+#intro.opening { cursor: default; pointer-events: none; }
+#intro.done { opacity: 0; visibility: hidden; }
+
+.intro-guest {
+  position: relative; z-index: 2; text-align: center; max-width: 92vw;
+  transition: opacity .7s var(--ease-soft), transform .7s var(--ease-soft);
+}
+.intro-label {
+  margin: 0 0 2px; font-size: .8rem; letter-spacing: .32em; text-transform: uppercase;
+  color: var(--gold-light); font-weight: 600;
+}
+.intro-name {
+  margin: 0; font-family: var(--font-guest); font-style: italic; font-weight: 600;
+  font-size: clamp(1.6rem, 7.2vw, 2.3rem); line-height: 1.25;
+  overflow-wrap: anywhere; unicode-bidi: plaintext;
+}
+
+.gate {
+  position: relative; z-index: 1;
+  width: min(80vw, 380px);
+  height: min(58vh, 560px);
+  height: min(58svh, 560px);
+  perspective: 1100px;
+  perspective-origin: 50% 45%;
+  transition: transform 2.8s var(--ease-soft);
+}
+/* Arched outer frame of the doorway */
+.gate-frame {
+  position: absolute; inset: -12px;
+  border-radius: 50% 50% 10px 10px / 30% 30% 10px 10px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 0 5px rgba(201,162,58,.12), 0 0 36px rgba(201,162,58,.25), inset 0 0 24px rgba(201,162,58,.2);
+}
+.gate-frame::after {
+  content: ""; position: absolute; inset: -9px;
+  border-radius: inherit; border: 1px solid rgba(201,162,58,.45);
+}
+/* Warm light behind the doors */
+.gate-glow {
+  position: absolute; inset: 0;
+  border-radius: 50% 50% 8px 8px / 30% 30% 8px 8px;
+  background: radial-gradient(ellipse at 50% 55%, #fff6da 0%, #f1d891 32%, rgba(201,162,58,.5) 62%, rgba(201,162,58,0) 82%);
+  opacity: 0; transform: scale(.85);
+  transition: opacity 1.6s var(--ease-soft) .25s, transform 2.6s var(--ease-out) .25s;
+}
+
+.door {
+  position: absolute; top: 0; bottom: 0; width: 50%;
+  background:
+    var(--pattern) center / 46px 46px,
+    linear-gradient(160deg, #12644c 0%, #0b3d2e 55%, #072a20 100%);
+  border: 2.5px solid var(--gold);
+  box-shadow: inset 0 0 40px rgba(0,0,0,.45);
+  transition: transform 2.1s var(--ease-door) .3s;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.door-left  { left: 0;  transform-origin: left center;  border-radius: 100% 0 0 6px / 30% 0 0 6px; border-right-width: 1.25px; }
+.door-right { right: 0; transform-origin: right center; border-radius: 0 100% 6px 0 / 0 30% 6px 0; border-left-width: 1.25px; }
+.door::before {
+  content: ""; position: absolute; inset: 14px;
+  border: 1.25px solid rgba(201,162,58,.6);
+}
+.door-left::before  { border-radius: 100% 0 0 4px / 28% 0 0 4px; }
+.door-right::before { border-radius: 0 100% 4px 0 / 0 28% 4px 0; }
+.door::after { /* ring handles */
+  content: ""; position: absolute; top: 72%; width: 16px; height: 16px;
+  border: 2.5px solid var(--gold); border-radius: 50%;
+}
+.door-left::after  { right: 12px; }
+.door-right::after { left: 12px; }
+/* Shading that deepens as each door turns away — gives the swing real depth */
+.door .shade {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity 2.1s var(--ease-door) .3s;
+}
+.door-left .shade  { background: linear-gradient(90deg, rgba(0,0,0,.1), rgba(0,0,0,.65)); }
+.door-right .shade { background: linear-gradient(270deg, rgba(0,0,0,.1), rgba(0,0,0,.65)); }
+
+/* Crescent seal */
+.seal {
+  position: absolute; left: 50%; top: 45%; z-index: 3;
+  width: 92px; height: 92px; margin: -46px 0 0 -46px;
+  border: 0; border-radius: 50%; padding: 0; cursor: pointer;
+  background: radial-gradient(circle at 35% 30%, var(--gold-pale), var(--gold) 45%, var(--gold-dark) 80%, var(--gold-deep));
+  box-shadow: 0 6px 18px rgba(0,0,0,.45), inset 0 -4px 10px rgba(0,0,0,.25), inset 0 3px 6px rgba(255,255,255,.4);
+  display: grid; place-items: center;
+  color: var(--emerald-700);
+  transition: transform .5s var(--ease-out), opacity .6s var(--ease-soft), box-shadow .45s ease;
+  animation: sealPulse 2.8s ease-in-out infinite;
+}
+.seal::before {
+  content: ""; position: absolute; inset: 7px; border-radius: 50%;
+  border: 1.5px dashed rgba(10,46,35,.5);
+}
+.seal::after { /* soft expanding ring */
+  content: ""; position: absolute; inset: -4px; border-radius: 50%;
+  border: 1.5px solid var(--gold-light);
+  animation: ring 2.8s ease-out infinite;
+}
+.seal svg { width: 46px; height: 46px; }
+@keyframes sealPulse { 50% { transform: scale(1.05); } }
+@keyframes ring { from { transform: scale(1); opacity: .8; } to { transform: scale(1.55); opacity: 0; } }
+
+/* "Tap to Open" — a gold pill that floats, shimmers and pulses so guests know to tap */
+.tap-hint {
+  position: absolute; left: 50%; top: calc(45% + 64px); z-index: 3;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  transform: translateX(-50%);
+  animation: hintFloat 2.6s ease-in-out infinite;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.tap-hint .chev { /* little chevron pointing up at the seal */
+  width: 18px; height: 18px; color: var(--gold-light);
+  filter: drop-shadow(0 0 4px rgba(236,212,138,.8));
+  animation: chevNudge 1.3s ease-in-out infinite;
+}
+.tap-hint .pill {
+  position: relative; isolation: isolate;
+  padding: 10px 24px 11px; border-radius: 999px;
+  background: linear-gradient(135deg, #fff1bf 0%, var(--gold-light) 25%, var(--gold) 60%, var(--gold-dark) 100%);
+  border: 1px solid #fff4cf;
+  color: var(--emerald-900); font-size: .95rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45), 0 0 22px rgba(236,212,138,.55), inset 0 1px 0 rgba(255,255,255,.7);
+}
+.tap-hint .shine { /* clips the light sweep to the pill */
+  position: absolute; inset: 0; border-radius: inherit; overflow: hidden; z-index: -1;
+}
+.tap-hint .shine::before { /* light sweeping across the gold */
+  content: ""; position: absolute; top: -20%; bottom: -20%; width: 45%; left: -60%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.85), transparent);
+  transform: skewX(-20deg);
+  animation: hintShine 2.6s ease-in-out infinite;
+}
+.tap-hint .pill::after { /* soft gold ring pulsing outwards */
+  content: ""; position: absolute; inset: -3px; border-radius: inherit; z-index: -2;
+  border: 2px solid rgba(236,212,138,.9);
+  animation: hintRing 2.6s ease-out infinite;
+}
+@keyframes hintFloat { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -6px); } }
+@keyframes chevNudge { 0%, 100% { transform: translateY(0); opacity: .7; } 50% { transform: translateY(-4px); opacity: 1; } }
+@keyframes hintShine { 0%, 35% { left: -60%; } 75%, 100% { left: 120%; } }
+@keyframes hintRing { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(1.35, 1.8); opacity: 0; } }
+
+/* a. Seal glows on tap */
+#intro.tapped .seal {
+  animation: none; transform: scale(1.08);
+  box-shadow: 0 0 0 6px rgba(236,212,138,.25), 0 0 46px 12px rgba(236,212,138,.65), inset 0 3px 6px rgba(255,255,255,.5);
+}
+#intro.tapped .seal::after, #intro.tapped .tap-hint { animation: none; opacity: 0; }
+/* b–c. Doors swing, light rises, view gently pushes in */
+#intro.opening .seal { transform: scale(.7); opacity: 0; transition-delay: .15s; }
+#intro.opening .intro-guest { opacity: 0; transform: translateY(-12px); }
+#intro.opening .gate { transform: scale(1.07); }
+#intro.opening .door-left  { transform: rotateY(-100deg); }
+#intro.opening .door-right { transform: rotateY(100deg); }
+#intro.opening .door .shade { opacity: 1; }
+#intro.opening .gate-glow  { opacity: 1; transform: scale(1.3); }
+
+/* =========================================================
+   4. PETALS (low density)
+   ========================================================= */
+.petals { position: fixed; inset: 0; z-index: 120; pointer-events: none; overflow: hidden; }
+body.opened .petals { z-index: 60; } /* above content & background videos, below the bottom nav; never blocks taps */
+.petal {
+  position: absolute; top: var(--y, -40px); left: var(--x);
+  animation: fall var(--dur) linear var(--delay) both;
+  will-change: transform;
+}
+.petal i {
+  display: block; width: var(--size); height: calc(var(--size) * .8);
+  border-radius: 80% 0 80% 0;
+  background: linear-gradient(135deg, var(--c1), var(--c2));
+  opacity: .8;
+  animation: sway var(--sway) ease-in-out infinite alternate;
+}
+@keyframes fall { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(var(--drift), 110vh, 0); } }
+@keyframes sway {
+  from { transform: translateX(-12px) rotate(-25deg); }
+  to   { transform: translateX(12px)  rotate(35deg); }
+}
+/* Rose petal: rounded, cupped, tumbles in 3D */
+.petal.rose i {
+  height: calc(var(--size) * 1.05);
+  border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
+  background: radial-gradient(circle at 35% 28%, var(--c1), var(--c2) 72%);
+  box-shadow: inset -2px -3px 5px rgba(90,0,25,.3);
+  opacity: .92;
+  animation-name: tumble;
+}
+@keyframes tumble {
+  0%   { transform: translateX(-14px) rotate(-30deg) rotateX(0deg)   rotateY(0deg); }
+  50%  { transform: translateX(4px)   rotate(10deg)  rotateX(60deg)  rotateY(30deg); }
+  100% { transform: translateX(14px)  rotate(40deg)  rotateX(10deg)  rotateY(160deg); }
+}
+/* Whole rose bloom: spins slowly as it drifts */
+.petal.bloom i { width: var(--size); height: var(--size); border-radius: 0; background: none; opacity: .95; animation: bloomSpin var(--sway) linear infinite; }
+.petal.bloom svg { display: block; width: 100%; height: 100%; }
+@keyframes bloomSpin { from { transform: translateX(-8px) rotate(0deg); } 50% { transform: translateX(8px) rotate(180deg); } to { transform: translateX(-8px) rotate(360deg); } }
+
+/* =========================================================
+   5. LAYOUT, REVEALS, SHARED PIECES
+   ========================================================= */
+main {
+  position: relative; z-index: 1;
+  max-width: 560px; margin: 0 auto;
+  padding: 0 calc(20px + var(--safe-r)) calc(110px + var(--safe-b)) calc(20px + var(--safe-l));
+  overflow-x: hidden;   /* swaying lantern glows must never widen the mobile viewport */
+}
+@supports (overflow: clip) { main { overflow-x: clip; } }
+section { margin: 0 0 96px; text-align: center; }
+
+/* Reveal-once on scroll. Only hidden when JS runs; failsafe shows everything. */
+.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out) var(--stagger, 0ms), transform .9s var(--ease-out) var(--stagger, 0ms); }
+.js .reveal.visible { opacity: 1; transform: none; }
+
+/* ---- Section choreography: each section enters in its own way (transform + opacity only) ---- */
+.js .reveal[data-anim] { transition-duration: 1.1s, 1.3s; }
+/* Card turns in like a page in 3D */
+.js .reveal[data-anim="flip"]   { transform: perspective(1400px) rotateY(-62deg) translateX(-8%); transform-origin: 0% 50%; }
+.js .reveal[data-anim="flip-r"] { transform: perspective(1400px) rotateY(62deg) translateX(8%);  transform-origin: 100% 50%; }
+/* Card unfolds downwards like a scroll/letter */
+.js .reveal[data-anim="unfold"] { transform: perspective(1400px) rotateX(-28deg) translateY(30px) scale(.97); transform-origin: 50% 0%; }
+/* Gentle zoom-in */
+.js .reveal[data-anim="zoom"]   { transform: scale(.88); }
+/* Containers whose children do the moving */
+.js .reveal[data-anim="names"], .js .reveal[data-anim="countdown"], .js .reveal[data-anim="buttons"] { transform: none; }
+.js .reveal[data-anim].visible { transform: none; }
+
+/* Couple names glide in from opposite sides and meet at the divider */
+.js [data-anim="names"] .name { opacity: 0; transition: opacity 1.2s var(--ease-out) .25s, transform 1.4s var(--ease-out) .25s; }
+.js [data-anim="names"] .name[data-bind="bride.name"] { transform: translateX(-60px); }
+.js [data-anim="names"] .name[data-bind="groom.name"] { transform: translateX(60px); transition-delay: .45s; }
+.js [data-anim="names"].visible .name { opacity: 1; transform: none; }
+
+/* Countdown tiles flip down one after another */
+.js [data-anim="countdown"] .unit { opacity: 0; transform: perspective(500px) rotateX(-95deg); transform-origin: 50% 0%; transition: opacity .6s ease, transform .9s cubic-bezier(.3, 1.35, .5, 1); }
+.js [data-anim="countdown"] .unit:nth-child(2) { transition-delay: .15s; }
+.js [data-anim="countdown"] .unit:nth-child(3) { transition-delay: .3s; }
+.js [data-anim="countdown"] .unit:nth-child(4) { transition-delay: .45s; }
+.js [data-anim="countdown"].visible .unit { opacity: 1; transform: none; }
+
+/* Calendar buttons pop in one by one */
+.js [data-anim="buttons"] .cal-buttons .btn { opacity: 0; transform: translateY(18px) scale(.9); transition: opacity .6s ease, transform .8s cubic-bezier(.3, 1.4, .5, 1); }
+.js [data-anim="buttons"] .cal-buttons .btn:nth-child(2) { transition-delay: .12s; }
+.js [data-anim="buttons"] .cal-buttons .btn:nth-child(3) { transition-delay: .24s; }
+.js [data-anim="buttons"].visible .cal-buttons .btn { opacity: 1; transform: none; }
+
+/* A single gold light sweep across every ivory card once it has arrived */
+.card { overflow: hidden; }
+.card::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,240,190,.55) 48%, rgba(255,240,190,.15) 55%, transparent 70%);
+  transform: translateX(-130%);
+}
+.visible .card::after, .card.visible::after { animation: cardSheen 1.6s var(--ease-soft) calc(var(--stagger, 0ms) + 1s) 1 both; }
+@keyframes cardSheen { from { transform: translateX(-130%); } to { transform: translateX(130%); } }
+/* Hero sequence: staggered fade after the doors open */
+.js .seq { opacity: 0; transform: translateY(14px); transition: opacity 1.1s var(--ease-soft) var(--d, 0ms), transform 1.3s var(--ease-out) var(--d, 0ms); }
+body.opened .seq { opacity: 1; transform: none; }
+
+.eyebrow {
+  display: block; font-size: .8rem; font-weight: 600; letter-spacing: .34em; text-transform: uppercase;
+  color: var(--gold-light); margin-bottom: 8px;
+}
+/* Section titles use a readable serif — script is reserved for the couple's names */
+.section-title {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: clamp(1.45rem, 6vw, 1.8rem); line-height: 1.3;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold-light); margin: 0 0 24px;
+}
+.ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 18px auto; color: var(--gold); }
+.ornament::before, .ornament::after { content: ""; height: 1px; width: 64px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.ornament::after { transform: scaleX(-1); }
+.ornament svg { width: 14px; height: 14px; }
+
+/* Ivory cards */
+.card {
+  position: relative;
+  background: linear-gradient(180deg, var(--ivory), var(--ivory-2));
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  border: 1px solid rgba(201,162,58,.7);
+  box-shadow: 0 18px 40px rgba(0,0,0,.32);
+}
+.card::before {
+  content: ""; position: absolute; inset: 8px; pointer-events: none;
+  border: 1px solid rgba(156,122,38,.4); border-radius: calc(var(--radius) - 6px);
+}
+.card.arch { border-radius: 50% 50% var(--radius) var(--radius) / 110px 110px var(--radius) var(--radius); padding-top: 66px; }
+.card.arch::before { border-radius: 50% 50% 12px 12px / 104px 104px 12px 12px; }
+.card .card-pattern {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background-image: var(--pattern); background-size: 56px 56px; opacity: .05;
+}
+.card > * { position: relative; }
+.card p { color: var(--ink-soft); }
+.card .section-title { color: var(--gold-dark); }
+
+/* =========================================================
+   6. HERO — BISMILLAH, PORTRAIT, NAMES
+   ========================================================= */
+.hero { position: relative; isolation: isolate; padding-top: calc(70px + var(--safe-t)); margin-bottom: 88px; }
+/* Background video: full-width behind the hero, under an emerald veil, fading into the page below */
+.hero-video {
+  position: absolute; z-index: -1; top: 0; bottom: -40px; left: 50%; width: 100vw; transform: translateX(-50%);
+  overflow: hidden; pointer-events: none;
+  -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent);
+}
+.hero-video video { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 2s var(--ease-soft); }
+.hero-video.ready video { opacity: 1; }
+.hero-video::after { content: ""; position: absolute; inset: 0; background: rgba(6, 38, 29, var(--veil, .55)); }
+/* Section background videos: full-width band with soft top and bottom fades */
+.has-bg-video { position: relative; isolation: isolate; padding: 56px 0; }
+.section-video {
+  position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%);
+  overflow: hidden; pointer-events: none;
+  -webkit-mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent);
+}
+.section-video video { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 2s var(--ease-soft); }
+.section-video.ready video { opacity: 1; }
+.section-video::after { content: ""; position: absolute; inset: 0; background: rgba(6, 38, 29, var(--veil, .55)); }
+.video-credit { display: block; margin-top: 10px; font-size: .78rem; opacity: .7; }
+.video-credit a { color: inherit; }
+.lanterns {
+  position: absolute; top: 0; left: -6px; right: -6px; height: 200px;
+  display: flex; justify-content: space-between; pointer-events: none;
+}
+.lantern {
+  position: relative; width: 40px; height: 150px;
+  transform-origin: 50% 0;
+  animation: lanternSway 6s ease-in-out infinite alternate;
+}
+.lantern:nth-child(2) { height: 185px; animation-duration: 7s; animation-delay: -2s; }
+.lantern svg { position: absolute; bottom: 0; left: 0; width: 100%; height: auto; }
+.lantern .string { position: absolute; top: 0; left: 50%; width: 1px; bottom: 70px; background: linear-gradient(var(--gold), var(--gold-dark)); }
+.lantern .glow {
+  position: absolute; left: 50%; bottom: 2px; width: 72px; height: 72px; margin-left: -36px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,214,120,.45), rgba(255,190,80,0) 65%);
+  animation: glowPulse 3.2s ease-in-out infinite alternate;
+}
+@keyframes lanternSway { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+@keyframes glowPulse { from { opacity: .5; } to { opacity: 1; } }
+
+.bismillah {
+  font-family: var(--font-ruqaa); font-weight: 400;
+  font-size: clamp(2rem, 9.5vw, 3rem); line-height: 1.9; margin: 0; padding: 0 34px;
+}
+/* Brighter, luminous gold for the Bismillah, with a soft golden glow */
+.bismillah.gold-text {
+  background-image: linear-gradient(100deg, #fff6d6 0%, #ffe9a8 18%, #f3cf6a 34%, #fffbe8 50%, #f3cf6a 64%, #fff6d6 66.7%, #ffe9a8 80%, #f3cf6a 92%, #fff6d6 100%);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 120, .55)) drop-shadow(0 1px 1px rgba(0, 0, 0, .35));
+}.bismillah-en { font-style: italic; color: var(--gold-light); margin: 0 0 34px; font-size: 1.05rem; padding: 0 38px; }
+
+/* Mihrab-arch photo frames */
+.portrait { display: flex; justify-content: center; gap: 14px; margin: 0 auto 26px; }
+.arch-frame {
+  position: relative; flex: 0 1 auto;
+  width: min(76vw, 340px);
+  padding: 7px;
+  border: 1px solid var(--gold);
+  border-radius: 50% 50% 14px 14px / 34% 34% 14px 14px;
+  box-shadow: 0 0 0 4px rgba(201,162,58,.1), 0 22px 46px rgba(0,0,0,.45);
+}
+.arch-frame::after { /* fine second gold line */
+  content: ""; position: absolute; inset: -7px; pointer-events: none;
+  border: 1px solid rgba(201,162,58,.35); border-radius: inherit;
+}
+.arch-inner {
+  position: relative; overflow: hidden; aspect-ratio: 4 / 5;
+  border-radius: 50% 50% 9px 9px / 33% 33% 9px 9px;
+  background: var(--emerald-900);
+  isolation: isolate;
+}
+.arch-inner img { width: 100%; height: 100%; object-fit: cover; }
+/* Gentle slow zoom on the featured photo only — origin follows the focal point */
+.arch-inner img.featured { animation: slowZoom 26s ease-in-out infinite alternate; will-change: transform; }
+@keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+.arch-inner::after { /* soft lower vignette for depth (no text sits on photos) */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 70%, rgba(6,38,29,.35));
+}
+.portrait.pair .arch-frame { width: min(42vw, 200px); padding: 5px; }
+.portrait.pair figure { margin: 0; display: flex; flex-direction: column; align-items: center; }
+.portrait.pair figcaption { font-family: var(--font-script); font-size: clamp(1.5rem, 6.5vw, 1.9rem); color: var(--gold-light); margin-top: 10px; line-height: 1.2; }
+
+/* Decorative placeholder (no people) */
+.ph {
+  position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 8px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(201,162,58,.18), transparent 60%),
+    var(--pattern) center / 44px 44px,
+    linear-gradient(180deg, var(--emerald-600), var(--emerald-900));
+  color: var(--gold-light);
+}
+.ph svg { width: 34%; max-width: 110px; height: auto; opacity: .9; }
+.ph .mono { font-family: var(--font-script); font-size: clamp(1.8rem, 9vw, 2.6rem); line-height: 1; }
+
+.hero-names { margin: 0; font-weight: 400; line-height: 1.1; }
+.hero-names .nm { display: block; font-family: var(--font-script); font-size: clamp(2.9rem, 13.5vw, 4.1rem); padding: 0 .1em; }
+.hero-names .amp { display: block; font-family: var(--font-script); font-size: 1.9rem; color: var(--gold); margin: -4px 0; }
+.hero-date { margin: 18px 0 0; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; font-size: .9rem; color: var(--gold-light); }
+.scroll-cue {
+  margin-top: 40px; font-size: .78rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-light);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.scroll-cue span { display: block; width: 1px; height: 34px; background: linear-gradient(var(--gold), transparent); transform-origin: top; animation: cue 2.4s ease-in-out infinite; }
+@keyframes cue { 0% { transform: scaleY(0); opacity: 1; } 70% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+
+/* =========================================================
+   7. CONTENT SECTIONS
+   ========================================================= */
+.ayah { font-family: var(--font-arabic); font-size: clamp(1.55rem, 6.6vw, 2rem); line-height: 2.2; color: var(--emerald-700); margin: 0 0 6px; }
+.ayah-en { font-style: italic; font-size: 1.15rem; }
+.ayah-ref { font-size: .82rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dark); line-height: 1.8; }
+.ayah-ref small { display: block; letter-spacing: .08em; text-transform: none; font-size: .9rem; font-style: italic; font-weight: 500; color: var(--ink-soft); }
+
+/* Personal greeting */
+.dear { font-family: var(--font-guest); font-style: italic; font-weight: 600; font-size: clamp(1.5rem, 6.5vw, 1.9rem); color: var(--gold-light); margin: 0 0 10px; overflow-wrap: anywhere; }
+.dear bdi { unicode-bidi: isolate; }
+.personal-msg { font-size: 1.2rem; color: var(--gold-pale); max-width: 400px; margin: 0 auto; }
+.invite-line { font-size: 1.15rem; font-style: italic; color: var(--gold-pale); max-width: 380px; margin: 0 auto 22px; }
+.name { font-family: var(--font-script); font-weight: 400; font-size: clamp(3.1rem, 14.5vw, 4.4rem); line-height: 1.15; margin: 0; padding: 0 .1em; }
+/* Delicate animated divider */
+.name-divider { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0; }
+.name-divider .line {
+  height: 1px; width: 30%;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  transform: scaleX(0); transform-origin: right center;
+  transition: transform 1.6s var(--ease-out) .5s;
+}
+.name-divider .line.r { transform-origin: left center; background: linear-gradient(270deg, transparent, var(--gold)); }
+.visible .name-divider .line, .failsafe .name-divider .line { transform: scaleX(1); }
+.name-divider .knot { position: relative; width: 52px; height: 52px; display: grid; place-items: center; flex: none; }
+.name-divider .knot svg { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--gold); opacity: 0; transform: rotate(-45deg) scale(.6); transition: opacity 1s ease .9s, transform 1.6s var(--ease-out) .9s; }
+.visible .name-divider .knot svg, .failsafe .name-divider .knot svg { opacity: 1; transform: none; }
+.name-divider .knot b { position: relative; font-family: var(--font-script); font-weight: 400; font-size: 1.8rem; color: var(--emerald-800); line-height: 1; }
+
+/* Families */
+.family { display: grid; gap: 20px; }
+.family .who { font-family: var(--font-script); font-size: 2.4rem; line-height: 1.15; }
+.family .rel { font-size: .8rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); margin: 4px 0; }
+.family .parent { font-weight: 700; font-size: 1.28rem; color: var(--emerald-700); }
+.family .sep { width: 30px; height: 30px; margin: 0 auto; color: var(--gold); }
+
+/* Countdown */
+.countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 420px; margin: 0 auto; }
+.unit { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+.flip-card {
+  position: relative; width: 100%; aspect-ratio: 1 / 1.1; perspective: 400px; border-radius: 12px;
+  background: linear-gradient(180deg, var(--emerald-600) 0%, var(--emerald-700) 50%, var(--emerald-800) 50%, var(--emerald-900) 100%);
+  border: 1px solid rgba(201,162,58,.6);
+  box-shadow: 0 10px 22px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.08);
+  display: grid; place-items: center; overflow: hidden;
+}
+.flip-card::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(0,0,0,.45); }
+.flip-num {
+  font-family: 'Amiri', serif; font-weight: 700; /* Amiri has lining digits */
+  font-size: clamp(1.6rem, 7.8vw, 2.3rem); color: var(--gold-light);
+  backface-visibility: hidden; font-variant-numeric: tabular-nums;
+}
+.flip-num.flip { animation: flip .6s cubic-bezier(.3, 1.3, .5, 1); }
+@keyframes flip { 0% { transform: rotateX(-90deg); opacity: .2; } 60% { opacity: 1; } 100% { transform: rotateX(0); opacity: 1; } }
+.unit small { font-size: .72rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); }
+.countdown-note { margin-top: 20px; font-weight: 600; color: var(--gold-pale); }
+
+/* Events */
+.events { display: grid; gap: 28px; }
+.event { padding-bottom: 32px; }
+.event-icon {
+  width: 70px; height: 70px; margin: -8px auto 10px; border-radius: 50%;
+  display: grid; place-items: center; color: var(--emerald-700);
+  background: radial-gradient(circle at 35% 30%, var(--gold-pale), var(--gold) 60%, var(--gold-dark));
+  box-shadow: 0 6px 16px rgba(156,122,38,.35);
+}
+.event-icon svg { width: 38px; height: 38px; }
+.event h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.55rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-dark); margin: 0 0 6px; }
+.event .date { font-weight: 700; font-size: 1.22rem; color: var(--emerald-700); margin: 0; }
+.event .time { font-size: 1.15rem; font-weight: 600; margin: 2px 0; color: var(--ink); }
+.event .note { font-style: italic; margin: 4px 0 0; }
+.tz-note { margin-top: 22px; font-size: .98rem; font-style: italic; color: var(--gold-pale); }
+
+/* Buttons — readable font, ≥ 48px touch targets */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 12px 24px; border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold) 50%, var(--gold-dark));
+  color: var(--emerald-900); font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; letter-spacing: .04em;
+  text-decoration: none; cursor: pointer;
+  box-shadow: 0 8px 20px rgba(156,122,38,.3), inset 0 1px 0 rgba(255,255,255,.45);
+  transition: transform .2s ease, box-shadow .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(.97); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.btn.big { width: 100%; min-height: 58px; font-size: 1.15rem; }
+.btn.ghost { background: transparent; color: var(--emerald-700); border: 1.5px solid var(--gold-dark); box-shadow: none; }
+.btn.dark-ghost { background: rgba(6,38,29,.55); color: var(--gold-light); box-shadow: none; }
+.btn.whatsapp { background: linear-gradient(135deg, #34c86a, #1c9e50); color: #fff; border-color: #1a9b4c; box-shadow: 0 8px 20px rgba(31,168,85,.3); }
+
+/* Location */
+.venue-name { font-weight: 700; font-size: 1.4rem; color: var(--emerald-700); margin: 0; }
+.venue-address { margin: 4px 0 22px; font-weight: 500; }
+.map-frame { position: relative; margin-top: 22px; border-radius: 14px; overflow: hidden; border: 1.5px solid var(--gold); aspect-ratio: 4 / 3; background: var(--ivory-2); isolation: isolate; }
+.map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+#venueMap { position: absolute; inset: 0; font-family: var(--font-body); }
+
+/* Venue marker: emerald pin with gold crescent, blinking glow, ripple rings and a label */
+.vpin { position: relative; width: 40px; height: 52px; }
+.vpin svg.pin { position: absolute; inset: 0; width: 40px; height: 52px; z-index: 2; filter: drop-shadow(0 4px 6px rgba(0,0,0,.45)); animation: pinBob 2.4s ease-in-out infinite; transform-origin: 50% 100%; }
+.vpin .glow { /* blinking gold halo behind the pin head */
+  position: absolute; left: 50%; top: 18px; width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%; z-index: 1;
+  background: radial-gradient(circle, rgba(255,228,140,.95), rgba(201,162,58,.45) 45%, rgba(201,162,58,0) 70%);
+  animation: pinBlink 1.2s ease-in-out infinite;
+}
+.vpin .ripple { /* rings spreading from the pin's point */
+  position: absolute; left: 50%; bottom: -6px; width: 22px; height: 10px; margin-left: -11px; border-radius: 50%;
+  border: 2px solid #ecd48a; opacity: 0; animation: pinRipple 2s ease-out infinite;
+}
+.vpin .ripple.r2 { animation-delay: 1s; }
+.vpin .label {
+  position: absolute; left: 50%; bottom: 62px; transform: translateX(-50%); z-index: 3;
+  white-space: nowrap; padding: 5px 12px 6px; border-radius: 999px;
+  background: var(--emerald-800); color: var(--gold-light); border: 1px solid var(--gold);
+  font: 700 .95rem/1.1 var(--font-body); letter-spacing: .04em;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+  animation: labelGlow 2.4s ease-in-out infinite;
+}
+.vpin .label::after { /* little pointer under the label */
+  content: ""; position: absolute; left: 50%; top: 100%; margin-left: -6px;
+  border: 6px solid transparent; border-top-color: var(--gold);
+}
+@keyframes pinBlink { 0%, 100% { opacity: .15; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes pinRipple { 0% { opacity: .9; transform: scale(.4); } 100% { opacity: 0; transform: scale(3.2); } }
+@keyframes pinBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes labelGlow { 0%, 100% { box-shadow: 0 6px 14px rgba(0,0,0,.35); } 50% { box-shadow: 0 6px 14px rgba(0,0,0,.35), 0 0 14px 3px rgba(236,212,138,.75); } }
+.leaflet-container a.leaflet-control-attribution-link, .leaflet-control-attribution { font-size: 10px; }
+.map-toggle {
+  min-height: 36px; padding: 0 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--gold); background: rgba(6,38,29,.88); color: var(--gold-light);
+  font: 700 .9rem var(--font-body); letter-spacing: .04em; box-shadow: 0 4px 10px rgba(0,0,0,.35);
+}
+
+.cal-buttons { display: grid; gap: 12px; }
+
+/* RSVP */
+.rsvp-form { display: grid; gap: 18px; text-align: left; }
+.field label, .field legend { display: block; font-weight: 700; color: var(--emerald-700); margin-bottom: 6px; font-size: 1.08rem; }
+.field input[type=text], .field select, .field textarea {
+  width: 100%; min-height: 52px; padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid rgba(156,122,38,.55); background: #fffdf7; color: var(--ink);
+  font-size: 1.1rem; font-weight: 500; /* ≥16px avoids iOS zoom */
+}
+.field textarea { min-height: 88px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--emerald-500); box-shadow: 0 0 0 3px rgba(22,105,79,.18); }
+fieldset.field { border: 0; padding: 0; margin: 0; }
+.chip {
+  margin-top: 8px; min-height: 40px; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px dashed var(--gold-dark); background: transparent; color: var(--emerald-700); font-weight: 600; font-size: .98rem;
+  max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.choice { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choice input { position: absolute; opacity: 0; pointer-events: none; }
+.choice label {
+  margin: 0; display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 52px; padding: 8px; border-radius: 12px; cursor: pointer;
+  border: 1.5px solid rgba(156,122,38,.55); background: #fffdf7; color: var(--ink);
+  font-weight: 700; transition: background .2s, color .2s, border-color .2s;
+}
+.choice input:checked + label { background: var(--emerald-700); color: var(--gold-light); border-color: var(--emerald-700); }
+.choice input:focus-visible + label { outline: 2px solid var(--emerald-500); outline-offset: 2px; }
+.rsvp-actions { display: grid; gap: 12px; margin-top: 6px; }
+
+/* Hosts */
+.hosts { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 14px; }
+.hosts .host { min-width: 0; }
+.hosts .host.lead { grid-column: 1 / -1; }
+.hosts .host-name { font-weight: 700; font-size: 1.15rem; color: var(--emerald-700); display: block; line-height: 1.3; overflow-wrap: anywhere; }
+.hosts .host.lead .host-name { font-size: 1.35rem; }
+.hosts .host-rel { font-size: .74rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dark); display: block; margin-top: 2px; }
+
+/* Host portraits: small mihrab arches. Photos stay still; only the frame animates. */
+.host-photo {
+  position: relative; width: 100%; max-width: 140px; margin: 0 auto 12px; padding: 5px;
+  border: 1px solid var(--gold);
+  border-radius: 50% 50% 12px 12px / 30% 30% 12px 12px;
+  background: var(--ivory);
+  box-shadow: 0 10px 24px rgba(11,61,46,.18);
+}
+.host.lead .host-photo { max-width: 180px; }
+.host-photo::before { /* soft gold halo that gently breathes after the reveal */
+  content: ""; position: absolute; inset: -6px; border-radius: inherit; pointer-events: none;
+  box-shadow: 0 0 22px 4px rgba(201,162,58,.55); opacity: 0;
+}
+.host-inner {
+  position: relative; overflow: hidden; aspect-ratio: 4 / 5; isolation: isolate;
+  border-radius: 50% 50% 8px 8px / 29% 29% 8px 8px; background: var(--emerald-900);
+}
+.host-inner img { width: 100%; height: 100%; object-fit: cover; }
+.host-inner .ph .mono { font-family: var(--font-body); font-weight: 600; font-size: 1.45rem; letter-spacing: .14em; }
+.host-inner::after { /* one-time light sweep across the photo */
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,244,207,.5) 50%, transparent 65%);
+  transform: translateX(-120%);
+}
+/* Reveal: each person rises in turn (father first, then brothers) when the card scrolls into view */
+.js .host { opacity: 0; transform: translateY(22px) scale(.96); transition: opacity .9s var(--ease-out) var(--d), transform 1.1s var(--ease-out) var(--d); }
+.visible .host, .failsafe .host { opacity: 1; transform: none; }
+.visible .host-inner::after { animation: hostSheen 1.5s var(--ease-soft) calc(var(--d) + .7s) 1 both; }
+.visible .host-photo::before { animation: hostHalo 4.5s ease-in-out calc(var(--d) + 1.2s) infinite; }
+@keyframes hostSheen { from { transform: translateX(-120%); } to { transform: translateX(120%); } }
+@keyframes hostHalo { 0%, 100% { opacity: .1; } 50% { opacity: .75; } }
+html.lite .visible .host-photo::before { animation: none; opacity: .3; }
+
+/* =========================================================
+   8. GALLERY (crossfade) + LIGHTBOX
+   ========================================================= */
+.gallery-stage {
+  position: relative; aspect-ratio: 4 / 5; /* reserves space — no layout jumps */
+  border-radius: 50% 50% 16px 16px / 26% 26% 16px 16px;
+  border: 1px solid var(--gold); padding: 6px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.4);
+  touch-action: pan-y; user-select: none; -webkit-user-select: none;
+}
+.gallery-clip { position: absolute; inset: 6px; overflow: hidden; border-radius: 50% 50% 11px 11px / 25% 25% 11px 11px; background: var(--emerald-900); }
+.g-slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .8s var(--ease-soft), visibility .8s; cursor: zoom-in; }
+.g-slide.active { opacity: 1; visibility: visible; }
+.g-slide img { width: 100%; height: 100%; object-fit: cover; -webkit-user-drag: none; }
+.g-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
+.icon-btn {
+  width: 48px; height: 48px; border-radius: 50%; flex: none;
+  border: 1px solid var(--gold); background: rgba(6,38,29,.75); color: var(--gold-light);
+  display: grid; place-items: center; cursor: pointer;
+}
+.icon-btn svg { width: 20px; height: 20px; }
+.dots { display: flex; gap: 4px; }
+.dots button { width: 28px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.dots button::before { content: ""; width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--gold); transition: transform .3s, background .3s; }
+.dots button[aria-current="true"]::before { background: var(--gold); transform: scale(1.3); }
+.g-counter { font-size: .95rem; font-weight: 600; letter-spacing: .14em; color: var(--gold-light); margin-top: 6px; }
+.g-caption { font-style: italic; color: var(--gold-pale); min-height: 1.6em; margin: 10px 0 0; }
+.g-expand { position: absolute; right: 16px; bottom: 16px; z-index: 2; }
+.g-play { position: absolute; left: 16px; bottom: 16px; z-index: 2; }
+
+dialog.lightbox {
+  width: 100vw; height: 100vh; height: 100dvh; max-width: 100vw; max-height: 100dvh; margin: 0; padding: 0;
+  border: 0; background: transparent; color: var(--ivory); overflow: hidden;
+}
+dialog.lightbox::backdrop { background: rgba(3,16,12,.94); }
+.lb-inner {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: calc(64px + var(--safe-t)) calc(12px + var(--safe-r)) calc(96px + var(--safe-b)) calc(12px + var(--safe-l));
+  touch-action: pan-y;
+}
+.lb-img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px; box-shadow: 0 20px 50px rgba(0,0,0,.6); transition: opacity .45s ease; }
+.lb-caption { margin: 12px 0 0; font-style: italic; color: var(--gold-pale); text-align: center; }
+.lb-close { position: absolute; top: calc(12px + var(--safe-t)); right: calc(12px + var(--safe-r)); }
+.lb-nav { position: absolute; bottom: calc(24px + var(--safe-b)); left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 22px; }
+.lb-nav .g-counter { margin: 0; min-width: 64px; text-align: center; }
+body.lb-open { overflow: hidden; }
+
+/* Closing */
+.dua-ar { font-family: var(--font-arabic); font-size: clamp(1.55rem, 6.6vw, 2rem); line-height: 2.1; color: var(--emerald-700); margin: 0 0 10px; }
+.dua-tr { font-style: italic; font-weight: 700; color: var(--gold-dark); }
+.gift { font-style: italic; font-weight: 600; font-size: clamp(1.35rem, 5.6vw, 1.6rem); line-height: 1.45; color: var(--gold-light); margin: 34px auto 24px; max-width: 380px; }
+footer { text-align: center; padding: 10px 0 30px; color: var(--gold-light); font-size: 1rem; padding-bottom: 1rem;}
+footer svg { width: 28px; height: 28px; color: var(--gold); display: block; margin: 0 auto 8px; }
+
+/* Bottom navigation: icon tabs, a sliding gold indicator and the music toggle */
+.quickbar {
+  position: fixed; z-index: 90; left: 50%; transform: translate(-50%, 20px);
+  bottom: calc(10px + var(--safe-b));
+  display: flex; align-items: stretch; padding: 5px;
+  width: min(520px, calc(100vw - 16px - var(--safe-l) - var(--safe-r)));
+  border-radius: 22px; border: 1px solid rgba(201,162,58,.7);
+  background: rgba(6,38,29,.9);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.45);
+  opacity: 0; transition: opacity .8s ease 1s, transform .8s var(--ease-out) 1s;
+}
+body.opened .quickbar { opacity: 1; transform: translate(-50%, 0); }
+.qb-tab {
+  position: relative; z-index: 1; flex: 1 1 0; min-width: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: 52px; padding: 4px 2px; border: 0; border-radius: 17px; background: transparent; cursor: pointer;
+  color: var(--gold-light); text-decoration: none; font: 700 .72rem/1.1 var(--font-body); letter-spacing: .05em;
+  transition: color .35s ease, transform .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.qb-tab svg { width: 21px; height: 21px; transition: transform .35s var(--ease-out); }
+.qb-tab span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.qb-tab:active { transform: scale(.94); }
+.qb-tab.active { color: var(--emerald-900); }
+.qb-tab.active svg { transform: translateY(-1px) scale(1.08); }
+.qb-tab.rsvp:not(.active) svg { color: #4fd17f; }   /* WhatsApp hint */
+.qb-music { flex: 0 0 48px; }
+.qb-music span { font-size: .62rem; opacity: .85; }
+/* The gold pill slides beneath the active tab */
+.qb-indicator {
+  position: absolute; z-index: 0; top: 5px; bottom: 5px; left: 0; width: 0; border-radius: 17px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+  box-shadow: 0 4px 12px rgba(201,162,58,.35);
+  opacity: 0; transition: transform .55s var(--ease-out), width .55s var(--ease-out), opacity .3s ease;
+}
+/* Brief gold highlight on the section a guest jumps to */
+.arrive-glow { animation: arriveGlow 1.6s var(--ease-soft) 1; }
+@keyframes arriveGlow { 0% { filter: drop-shadow(0 0 0 rgba(236,212,138,0)); } 35% { filter: drop-shadow(0 0 18px rgba(236,212,138,.75)); } 100% { filter: drop-shadow(0 0 0 rgba(236,212,138,0)); } }
+
+.toast {
+  position: fixed; left: 50%; bottom: calc(86px + var(--safe-b)); z-index: 130;
+  transform: translate(-50%, 16px); opacity: 0;
+  background: var(--ivory); color: var(--emerald-800); font-weight: 700;
+  padding: 10px 20px; border-radius: 999px; border: 1px solid var(--gold);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  transition: opacity .3s ease, transform .3s ease; pointer-events: none;
+  max-width: 90vw; text-align: center;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* =========================================================
+   9. RESPONSIVE
+   ========================================================= */
+@media (min-width: 640px) {
+  .cal-buttons { grid-template-columns: repeat(3, 1fr); }
+  .rsvp-actions { grid-template-columns: 2fr 1fr; }
+  .card { padding: 46px 36px; }
+}
+@media (max-width: 359px) {
+  .qb-tab { font-size: .66rem; }
+  .qb-music { flex-basis: 40px; }
+  .countdown { gap: 6px; }
+}
+@media (max-height: 560px) and (orientation: landscape) {
+  .gate { height: 70vh; width: min(46vw, 280px); }
+  #intro { flex-direction: row; }
+}
+
+/* =========================================================
+   10. CALM MODES
+   ========================================================= */
+/* Page hidden → pause decorative animation */
+html.paused *, html.paused *::before, html.paused *::after { animation-play-state: paused !important; }
+/* Lite mode (small/slower devices): drop the costliest continuous effects */
+html.lite .lantern .glow, html.lite .star { animation: none; }
+html.lite .arch-inner img.featured { animation: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+  .js .reveal, .js .seq, .js .host,
+  .js .reveal[data-anim], .js [data-anim] .name, .js [data-anim] .unit, .js [data-anim] .cal-buttons .btn { transform: none; transition: opacity .5s ease; }
+  .door, .door .shade, .gate, .gate-glow, .seal { transition: opacity .4s ease !important; }
+  #intro.opening .door-left, #intro.opening .door-right { transform: none; }
+  #intro.opening .gate { transform: none; }
+  .name-divider .line, .name-divider .knot svg { transition: none; transform: none; opacity: 1; }
+  .petals { display: none; }
+  .g-slide { transition: opacity .2s ease, visibility .2s; }
+}
+
+/* Failsafe: if scripts fail, show everything and hide the doors */
+html.failsafe #intro { display: none; }
+html.failsafe body { overflow: auto !important; height: auto !important; }
+html.failsafe .reveal, html.failsafe .seq,
+html.failsafe [data-anim] .name, html.failsafe [data-anim] .unit, html.failsafe [data-anim] .cal-buttons .btn { opacity: 1 !important; transform: none !important; }
+html.failsafe .quickbar { opacity: 1; }
+
+.leaflet-control-attribution{
+  display: none !important;
+}
+.video-credit{
+  display: none !important;
+}
+section{
+  margin-bottom: 1rem !important;
+}
+
+/* =========================================================
+   PREVIEW THEME — colours, section bands and body font from index.html
+   (everything below only overrides; delete this block to go back)
+   ========================================================= */
+:root {
+  --emerald-900: #031d1a;  --emerald-800: #062e28;  --emerald-700: #073b32;
+  --emerald-600: #0b342c;  --emerald-500: #12453a;
+  --gold: #c8a760;  --gold-light: #eed9a0;  --gold-pale: #f4e6c4;  --gold-dark: #a3843f;  --gold-deep: #7d6328;
+  --ivory: #f5eedf;  --ivory-2: #f5eedf;  --ink: #073b32;  --ink-soft: #55665e;
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+}
+body { font-size: 1rem; font-weight: 400; line-height: 1.7; background: var(--emerald-900); }
+.bg { background: radial-gradient(ellipse at 50% 0%, rgba(200,167,96,.08), transparent 55%), linear-gradient(180deg, #062e28, #031d1a); }
+/* Headings & lyrical lines stay in the elegant serif; body copy, labels and buttons use DM Sans */
+.section-title, .event h3, .venue-name, .hosts .host-name, .family .parent, .dear, .invite-line,
+.personal-msg, .ayah-en, .bismillah-en, .gift, .dua-tr, .g-caption, .countdown-note, .hero-date { font-family: var(--serif); }
+.section-title { font-weight: 500; letter-spacing: .1em; font-size: clamp(1.6rem, 6.6vw, 2rem); }
+.eyebrow, .unit small, .host-rel, .family .rel, .ayah-ref { font-family: var(--font-body); font-size: .68rem; letter-spacing: .27em; font-weight: 500; }
+.dear { font-size: clamp(1.6rem, 7vw, 2rem); }
+.personal-msg, .invite-line { font-size: 1.25rem; }
+
+/* Ivory cards become full-width cream bands (edge to edge, no rounded card) */
+section > .card {
+  margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+  border-radius: 0 !important; border: 0; box-shadow: none;
+  padding: 64px max(24px, calc(50vw - 250px)) !important;
+  background: var(--ivory);
+}
+section > .card::before { display: none; }
+section > .card .card-pattern { opacity: .035; border-radius: 0; }
+section > .card .section-title { color: var(--ink); }
+.card p { color: var(--ink-soft); }
+
+/* Event cards: tall thin-gold arches on deep green (like index.html) */
+.events .event.card {
+  background: linear-gradient(160deg, rgba(18,69,52,.38), #092d27);
+  color: var(--ivory); border: 1px solid rgba(189,161,91,.4); box-shadow: none;
+  border-radius: 120px 120px 4px 4px;
+}
+.events .event.card::before { display: none; }
+.events .event.card h3 { color: #f0e4c6; font-weight: 500; letter-spacing: .14em; }
+.events .event .date { color: var(--gold-light); }
+.events .event .time { color: #ddcfaf; }
+.events .event .note { color: #9fb8a6; }
+#eventsSection { background: #0b342c; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 64px max(20px, calc(50vw - 260px)) !important; }
+
+/* Buttons: square-ish, letter-spaced, thinner */
+.btn { border-radius: 4px; font-family: var(--font-body); font-weight: 600; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
+.btn.dark-ghost { background: transparent; border: 1px solid rgba(200,167,96,.55); color: var(--gold-light); }
+.field label, .field legend { font-family: var(--font-body); font-weight: 600; font-size: .95rem; }</style>
+</head>
+<body class="locked">
+<!-- =========================================================
+     SVG SPRITE (icons & ornaments — no human figures)
+     ========================================================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecd48a"/><stop offset=".5" stop-color="#c9a23a"/><stop offset="1" stop-color="#9c7a26"/>
+    </linearGradient>
+    <radialGradient id="gGlass" cx=".5" cy=".55" r=".6">
+      <stop offset="0" stop-color="#fff6cf"/><stop offset=".45" stop-color="#ffcf6b"/><stop offset="1" stop-color="#b8791c"/>
+    </radialGradient>
+  </defs>
+  <symbol id="i-crescent" viewBox="0 0 100 100">
+    <path fill="currentColor" d="M60 10a42 42 0 1 0 30 68 36 36 0 1 1-30-68z"/>
+    <path fill="currentColor" d="M70 30l3.2 8.8 9.3.4-7.3 5.8 2.5 9-7.7-5.2-7.7 5.2 2.5-9-7.3-5.8 9.3-.4z"/>
+  </symbol>
+  <symbol id="i-star8" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="3">
+      <rect x="20" y="20" width="60" height="60"/><rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)"/>
+    </g>
+  </symbol>
+  <symbol id="i-star8-solid" viewBox="0 0 100 100">
+    <g fill="url(#gGold)"><rect x="18" y="18" width="64" height="64"/><rect x="18" y="18" width="64" height="64" transform="rotate(45 50 50)"/></g>
+    <circle cx="50" cy="50" r="27" fill="#fbf6ea"/>
+  </symbol>
+  <symbol id="i-lantern" viewBox="0 0 60 110">
+    <circle cx="30" cy="5" r="4" fill="none" stroke="url(#gGold)" stroke-width="2"/>
+    <path d="M20 18 L40 18 L34 9 L26 9 Z" fill="url(#gGold)"/>
+    <path d="M14 20 H46 L44 25 H16 Z" fill="url(#gGold)"/>
+    <path d="M16 25 Q30 18 44 25 L49 70 Q30 84 11 70 Z" fill="url(#gGlass)" stroke="url(#gGold)" stroke-width="2"/>
+    <g fill="none" stroke="#9c7a26" stroke-width="1.4" opacity=".85"><path d="M22 70 V44 Q22 34 30 30 Q38 34 38 44 V70"/><path d="M30 30 V76"/><path d="M15 50 H45"/></g>
+    <path d="M10 70 H50 L44 80 H16 Z" fill="url(#gGold)"/>
+    <path d="M30 80 V94" stroke="url(#gGold)" stroke-width="2"/>
+    <path d="M30 92 l4 10 h-8 z" fill="url(#gGold)"/>
+  </symbol>
+  <symbol id="i-mehndi" viewBox="0 0 64 64">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round">
+      <circle cx="32" cy="32" r="5"/>
+      <path d="M32 27c-4-7-4-13 0-18 4 5 4 11 0 18zM32 37c4 7 4 13 0 18-4-5-4-11 0-18zM27 32c-7 4-13 4-18 0 5-4 11-4 18 0zM37 32c7-4 13-4 18 0-5 4-11 4-18 0z"/>
+      <path d="M28.5 28.5c-6-2-9-6-9.5-9.5 3.5.5 7.5 3.5 9.5 9.5zM35.5 35.5c6 2 9 6 9.5 9.5-3.5-.5-7.5-3.5-9.5-9.5zM35.5 28.5c2-6 6-9 9.5-9.5-.5 3.5-3.5 7.5-9.5 9.5zM28.5 35.5c-2 6-6 9-9.5 9.5.5-3.5 3.5-7.5 9.5-9.5z"/>
+    </g>
+  </symbol>
+  <symbol id="i-nikah" viewBox="0 0 64 64">
+    <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><circle cx="25" cy="39" r="13"/><circle cx="39" cy="39" r="13"/><path d="M39 26l-5-6 5-7 5 7z"/></g>
+  </symbol>
+  <symbol id="i-walima" viewBox="0 0 64 64">
+    <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 45h48M5 51h54"/><path d="M12 45a20 20 0 0 1 40 0"/><circle cx="32" cy="21" r="3"/><path d="M20 38a13 13 0 0 1 8-8"/></g>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM12 12v5M9.5 14.5h5"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9v6h4l5 5V4L8 9z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9v6h4l5 5V4L8 9z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9l6 6M22 9l-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20V10a8 8 0 0 1 16 0v10z"/><path d="M4 18l5-5 4 4 2-2 5 5"/><circle cx="15" cy="10" r="1.6" fill="currentColor"/></g></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5l11 7-11 7z"/></symbol>
+</svg>
+
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>#intro{display:none}body.locked{overflow:auto;height:auto}</style></noscript>
+
+<div class="bg" aria-hidden="true"><div class="stars" id="bgStars"></div></div>
+
+<!-- =========================================================
+     INTRO — first screen: guest name, doors, Tap to Open
+     ========================================================= -->
+<div id="intro" role="dialog" aria-modal="true" aria-labelledby="introLabel introGuest">
+  <div class="stars" id="introStars" aria-hidden="true"></div>
+  <div class="intro-guest">
+    <p class="intro-label" id="introLabel" data-bind="guest.introLabel"></p>
+    <p class="intro-name gold-text" id="introGuest" dir="auto"></p>
+  </div>
+  <div class="gate">
+    <div class="gate-glow" aria-hidden="true"></div>
+    <div class="gate-frame" aria-hidden="true"></div>
+    <div class="door door-left" aria-hidden="true"><i class="shade"></i></div>
+    <div class="door door-right" aria-hidden="true"><i class="shade"></i></div>
+    <button class="seal" id="openBtn" type="button" aria-label="Tap to open the invitation">
+      <svg aria-hidden="true"><use href="#i-crescent"/></svg>
+    </button>
+    <div class="tap-hint" aria-hidden="true">
+      <svg class="chev" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="pill"><span class="shine"></span>Tap to Open</span>
+    </div>
+  </div>
+</div>
+
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<!-- =========================================================
+     MAIN CONTENT
+     ========================================================= -->
+<main id="main">
+
+  <!-- 1. Bismillah + couple portrait + names (revealed by the opening) -->
+  <section class="hero" id="hero" tabindex="-1" aria-labelledby="coupleTitle">
+    <div class="hero-video" id="heroVideo" aria-hidden="true"></div>
+    <div class="lanterns" aria-hidden="true">
+      <div class="lantern"><span class="string"></span><span class="glow"></span><svg viewBox="0 0 60 110"><use href="#i-lantern"/></svg></div>
+      <div class="lantern"><span class="string"></span><span class="glow"></span><svg viewBox="0 0 60 110"><use href="#i-lantern"/></svg></div>
+    </div>
+    <p class="bismillah gold-text seq" lang="ar" dir="rtl" style="--d:0ms">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <p class="bismillah-en seq" style="--d:200ms">In the name of Allah, the Most Gracious, the Most Merciful</p>
+    <div class="portrait seq" id="portrait" style="--d:400ms"></div>
+    <h1 class="hero-names seq" id="coupleTitle" style="--d:750ms">
+      <span class="nm gold-text shimmer-once" data-bind="bride.name">Noori Parveen</span>
+      <span class="amp" aria-label="and">&amp;</span>
+      <span class="nm gold-text shimmer-once" data-bind="groom.name">Allauddin</span>
+    </h1>
+    <p class="hero-date seq" id="heroDate" style="--d:1000ms"></p>
+    <div class="scroll-cue seq" aria-hidden="true" style="--d:1300ms">Scroll<span></span></div>
+  </section>
+
+  <!-- 2. Surah Ar-Rum 30:21 -->
+  <section class="reveal" data-anim="unfold" aria-label="Quran, Surah Ar-Rum 30:21">
+    <div class="card arch">
+      <div class="card-pattern" aria-hidden="true"></div>
+      <p class="ayah" lang="ar" dir="rtl">وَمِنْ آيَاتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَـٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</p>
+      <div class="ornament" aria-hidden="true"><svg><use href="#i-star8"/></svg></div>
+      <p class="ayah-en">“And of His signs is that He created for you from yourselves mates that you may find tranquillity in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.”</p>
+      <div class="ayah-ref">Surah Ar-Rum · 30:21<small>Translation: Sahih International</small></div>
+    </div>
+  </section>
+
+  <!-- 3. Personal greeting + couple -->
+  <section class="reveal" data-anim="names" id="coupleSection" aria-labelledby="coupleHeading">
+    <p class="dear" id="dearLine"></p>
+    <p class="personal-msg" data-bind="guest.message"></p>
+    <div class="ornament" aria-hidden="true"><svg><use href="#i-star8"/></svg></div>
+    <p class="invite-line">With the blessings of Allah, we joyfully invite you to the wedding of</p>
+    <h2 id="coupleHeading" class="sr-only"><span data-bind="bride.name">Noori Parveen</span> and <span data-bind="groom.name">Allauddin</span></h2>
+    <p class="name gold-text shimmer-once" aria-hidden="true" data-bind="bride.name">Noori Parveen</p>
+    <div class="name-divider" aria-hidden="true">
+      <span class="line l"></span>
+      <span class="knot"><svg><use href="#i-star8-solid"/></svg><b>&amp;</b></span>
+      <span class="line r"></span>
+    </div>
+    <p class="name gold-text shimmer-once" aria-hidden="true" data-bind="groom.name">Allauddin</p>
+  </section>
+
+  <!-- 4. Families -->
+  <section class="reveal" data-anim="flip" aria-labelledby="famHeading">
+    <div class="card">
+      <div class="card-pattern" aria-hidden="true"></div>
+      <h2 id="famHeading" class="section-title">Our Families</h2>
+      <div class="family">
+        <div>
+          <div class="who gold-text on-light" data-bind="bride.name">Noori Parveen</div>
+          <div class="rel" data-bind="bride.relation"></div>
+          <div class="parent" data-bind="bride.parent"></div>
+        </div>
+        <svg class="sep" aria-hidden="true"><use href="#i-star8"/></svg>
+        <div>
+          <div class="who gold-text on-light" data-bind="groom.name">Allauddin</div>
+          <div class="rel" data-bind="groom.relation"></div>
+          <div class="parent" data-bind="groom.parent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Countdown -->
+  <section class="reveal" data-anim="countdown" id="countdownSection" aria-labelledby="cdHeading">
+    <span class="eyebrow">Counting the moments</span>
+    <h2 id="cdHeading" class="section-title">Until the Nikah</h2>
+    <div class="countdown" role="timer" aria-live="off">
+      <div class="unit"><div class="flip-card"><span class="flip-num" data-unit="days">00</span></div><small>Days</small></div>
+      <div class="unit"><div class="flip-card"><span class="flip-num" data-unit="hours">00</span></div><small>Hours</small></div>
+      <div class="unit"><div class="flip-card"><span class="flip-num" data-unit="minutes">00</span></div><small>Minutes</small></div>
+      <div class="unit"><div class="flip-card"><span class="flip-num" data-unit="seconds">00</span></div><small>Seconds</small></div>
+    </div>
+    <p class="countdown-note" id="countdownNote"></p>
+  </section>
+
+  <!-- 6. Events -->
+  <section id="eventsSection" aria-labelledby="evHeading">
+    <div class="reveal">
+      <span class="eyebrow">Celebrations</span>
+      <h2 id="evHeading" class="section-title">Wedding Events</h2>
+    </div>
+    <div class="events" id="events"></div>
+    <p class="tz-note reveal" id="tzNote"></p>
+  </section>
+
+  <!-- 7. Location -->
+  <section class="reveal" data-anim="zoom" id="location" aria-labelledby="locHeading">
+    <div class="card">
+      <div class="card-pattern" aria-hidden="true"></div>
+      <h2 id="locHeading" class="section-title">The Venue</h2>
+      <p class="venue-name" data-bind="venue.name"></p>
+      <p class="venue-address" data-bind="venue.address"></p>
+      <a class="btn big" id="directionsBtn" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-pin"/></svg> Get Directions
+      </a>
+      <div class="map-frame">
+        <div id="venueMap" role="region" aria-label="Map showing Sahabuddin Palace"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Add to Calendar -->
+  <section class="reveal" data-anim="buttons" aria-labelledby="calHeading">
+    <span class="eyebrow">Save the dates</span>
+    <h2 id="calHeading" class="section-title">Add to Calendar</h2>
+    <div class="cal-buttons" id="calButtons"></div>
+  </section>
+
+  <!-- 9. RSVP -->
+  <section class="reveal" data-anim="unfold" id="rsvp" aria-labelledby="rsvpHeading">
+    <div class="card arch">
+      <div class="card-pattern" aria-hidden="true"></div>
+      <h2 id="rsvpHeading" class="section-title">Kindly RSVP</h2>
+      <p>Please let us know if you can join us, in sha Allah.</p>
+      <form class="rsvp-form" id="rsvpForm" novalidate>
+        <div class="field">
+          <label for="rName">Your name</label>
+          <input type="text" id="rName" name="name" autocomplete="name" required placeholder="Full name" dir="auto" maxlength="80">
+          <button type="button" class="chip" id="useGuestName" hidden></button>
+        </div>
+        <fieldset class="field">
+          <legend>Will you attend?</legend>
+          <div class="choice">
+            <input type="radio" id="rYes" name="attending" value="yes" checked><label for="rYes">Yes, in sha Allah</label>
+            <input type="radio" id="rNo" name="attending" value="no"><label for="rNo">Regretfully, no</label>
+          </div>
+        </fieldset>
+        <div class="field" id="guestsField">
+          <label for="rGuests">Number of guests</label>
+          <select id="rGuests" name="guests"></select>
+        </div>
+        <div class="field">
+          <label for="rMsg">Message / duas <span style="font-weight:500">(optional)</span></label>
+          <textarea id="rMsg" name="message" placeholder="Your wishes for the couple" dir="auto"></textarea>
+        </div>
+        <div class="rsvp-actions">
+          <button type="submit" class="btn whatsapp big"><svg aria-hidden="true"><use href="#i-wa"/></svg> RSVP on WhatsApp</button>
+          <a class="btn ghost big" id="callBtn"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 10. Eagerly Awaiting Your Presence -->
+  <section class="reveal" data-anim="flip-r" aria-labelledby="hostHeading">
+    <div class="card arch">
+      <div class="card-pattern" aria-hidden="true"></div>
+      <svg aria-hidden="true" style="width:36px;height:36px;color:var(--gold-dark);margin:0 auto 8px;display:block"><use href="#i-crescent"/></svg>
+      <h2 id="hostHeading" class="section-title">Eagerly Awaiting Your Presence</h2>
+      <ul class="hosts" id="hosts"></ul>
+    </div>
+  </section>
+
+  <!-- 11. Gallery -->
+  <section class="reveal" data-anim="zoom" id="gallerySection" aria-labelledby="galHeading" aria-roledescription="carousel">
+    <span class="eyebrow">Moments</span>
+    <h2 id="galHeading" class="section-title">Our Photographs</h2>
+    <div class="gallery-stage" id="galleryStage" tabindex="0" aria-label="Photo gallery. Swipe or use arrow keys; press Enter to view larger.">
+      <div class="gallery-clip" id="galleryClip"></div>
+      <button class="icon-btn g-expand" id="gExpand" type="button" aria-label="View photo larger"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+      <button class="icon-btn g-play" id="gPlay" type="button" aria-label="Pause slideshow" hidden><svg aria-hidden="true"><use href="#i-pause"/></svg></button>
+    </div>
+    <p class="g-caption" id="gCaption" aria-live="polite"></p>
+    <div class="g-controls">
+      <button class="icon-btn" id="gPrev" type="button" aria-label="Previous photo"><svg style="transform:scaleX(-1)" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      <div class="dots" id="gDots"></div>
+      <button class="icon-btn" id="gNext" type="button" aria-label="Next photo"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+    </div>
+    <div class="g-counter" id="gCounter" aria-hidden="true"></div>
+  </section>
+
+  <!-- 12. Closing dua + 13. Share -->
+  <section class="reveal" data-anim="unfold" id="closingSection" aria-labelledby="duaHeading" style="margin-bottom: 0px !important;padding-bottom: 1rem;">
+    <div class="card">
+      <div class="card-pattern" aria-hidden="true"></div>
+      <h2 id="duaHeading" class="section-title">A Dua for the Couple</h2>
+      <!-- Dual form ("lakuma") matching the transliteration; the hadith (Abu Dawud 2130) is singular ("laka"). Review before publishing. -->
+      <p class="dua-ar" lang="ar" dir="rtl">بَارَكَ ٱللَّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+      <p class="dua-tr">“Barakallahu lakuma wa baraka alaykuma wa jama'a baynakuma fi khair”</p>
+      <p>May Allah bless you both, shower His blessings upon you, and unite you both in goodness.</p>
+    </div>
+    <p class="gift">Your presence and duas are our greatest gift.</p>
+    <button class="btn dark-ghost" id="shareBtn" type="button"><svg aria-hidden="true"><use href="#i-share"/></svg> Share Invitation</button>
+  </section>
+
+  <footer>
+    <svg aria-hidden="true"><use href="#i-crescent"/></svg>
+    With love &amp; duas — <span data-bind="footer"></span>
+    <small class="video-credit" id="videoCredit" hidden></small>
+  </footer>
+</main>
+
+<!-- Quick actions (appear after opening) -->
+<!-- Bottom navigation (appears after opening). Tabs glide to their section. -->
+<nav class="quickbar" id="quickbar" aria-label="Invitation sections">
+  <span class="qb-indicator" aria-hidden="true"></span>
+  <a class="qb-tab" href="#hero" data-target="hero"><svg aria-hidden="true"><use href="#i-crescent"/></svg><span>Home</span></a>
+  <a class="qb-tab" href="#eventsSection" data-target="eventsSection"><svg aria-hidden="true"><use href="#i-cal"/></svg><span>Events</span></a>
+  <a class="qb-tab" href="#location" data-target="location"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Venue</span></a>
+  <a class="qb-tab" href="#gallerySection" data-target="gallerySection"><svg aria-hidden="true"><use href="#i-photo"/></svg><span>Photos</span></a>
+  <a class="qb-tab rsvp" href="#rsvp" data-target="rsvp"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>RSVP</span></a>
+  <button class="qb-tab qb-music" id="musicBtn" type="button" aria-label="Mute music" hidden><svg aria-hidden="true"><use href="#i-sound"/></svg><span>Music</span></button>
+</nav>
+
+<!-- Larger photo view -->
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-inner" id="lbInner">
+    <img class="lb-img" id="lbImg" alt="">
+    <p class="lb-caption" id="lbCaption"></p>
+  </div>
+  <button class="icon-btn lb-close" id="lbClose" type="button" aria-label="Close photo viewer"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  <div class="lb-nav">
+    <button class="icon-btn" id="lbPrev" type="button" aria-label="Previous photo"><svg style="transform:scaleX(-1)" aria-hidden="true"><use href="#i-chev"/></svg></button>
+    <div class="g-counter" id="lbCounter"></div>
+    <button class="icon-btn" id="lbNext" type="button" aria-label="Next photo"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Failsafe: if the main script fails, reveal all content and remove the doors -->
+<script>
+  window.addEventListener('error', function () { document.documentElement.classList.add('failsafe'); });
+  setTimeout(function () { if (!window.__inviteReady) document.documentElement.classList.add('failsafe'); }, 4000);
+</script>
+
+<script>
+/* =========================================================
+   CONFIG — edit all invitation details here
+   ========================================================= */
+const CONFIG = {
+  groom: { name: 'Allauddin', relation: 'Son of', parent: 'Haji Mohammad Shamshul' },
+  bride: { name: 'Noori Parveen', relation: 'Daughter of', parent: 'Masud Ansari' },
+
+  /* Personalised guest greeting: page.html?guest=Shahabuddin%20Ansari */
+  guest: {
+    param: 'guest',
+    fallbackName: 'Family & Friends',      // used when no (valid) guest name is given
+    maxLength: 60,                         // longer names are shortened with "…"
+    introLabel: 'A special invitation for',
+    greeting: 'Dear',                      // → "Dear Shahabuddin Ansari,"
+    message: 'With love and gratitude, we invite you to celebrate the beginning of our new chapter.'
+  },
+
+  /* Time zone of the venue — all times below are local time there.
+     Countdown and calendar files are calculated from this offset. */
+  utcOffset: '+05:30',
+  timezoneLabel: 'IST',
+  timezoneName: 'India Standard Time',
+
+  countdownTo: '2027-05-23T13:30',         // Nikah (24h local time)
+
+  events: [
+    { id: 'mehndi', title: 'Mehndi', icon: 'i-mehndi', start: '2027-05-22T17:00', timeSuffix: 'onwards', note: '' },
+    { id: 'nikah',  title: 'Nikah',  icon: 'i-nikah',  start: '2027-05-23T23:30', timeSuffix: 'onwards',        note: 'After Isha prayer' }
+    // { id: 'walima', title: 'Walima', icon: 'i-walima', start: '2027-05-25T18:00', timeSuffix: 'onwards',        note: 'Dinner' }
+  ],
+  /* Calendar files need an end time. No end times were provided, so each event uses this
+     length unless you add `end: 'YYYY-MM-DDTHH:MM'` to an event above. */
+  calendarDefaultMinutes: 180,
+
+  /* ⚠ TEST DATA — replace with the bride family's venue.
+     Tip: open the place in Google Maps, copy its link into mapLink, and its
+     latitude/longitude (in the URL, after the @) into lat / lng. */
+  venue: {
+    name: 'Residence of Masud Ansari',
+    address: 'Kheskari, Giridih, Jharkhand, 825322',
+    mapLink: 'https://www.google.com/maps/search/?api=1&query=24.146259,85.973083',
+    lat: 24.146259,                        // bride's house
+    lng: 85.973083,
+    pinLabel: 'Masud — Palace',       // text shown on the map marker
+    mapStyle: 'satellite',                 // 'satellite' or 'map' (guests can switch on the map)
+    mapZoom: 17,                           // 15 = neighbourhood, 18 = very close
+    // Fallback Google map (used only if the map library cannot load)
+    mapQuery: '24.146259,85.973083'
+  },
+
+  phone: '[bride side phone — TEST]',      // ⚠ TEST — digits with country code, e.g. '919876543210'
+  maxGuests: 10,
+
+  /* Shown in "Eagerly Awaiting Your Presence". `photo` = file in the images folder
+     (missing file → gold monogram placeholder; remove `photo` to show no frame).
+     People sit two per row; add `lead: true` to make someone span the full width (larger). */
+  // ⚠ TEST DATA — the bride's family (replace names; add photos to the images folder)
+  hosts: [
+    { name: 'Masud Ansari',             relation: 'Father of the Bride',  photo: 'images/bride-father.jpg',   focus: '50% 25%' },
+    { name: '[Mother\'s name — TEST]',  relation: 'Mother of the Bride',  photo: 'images/bride-mother.jpg',   focus: '50% 25%' },
+    { name: 'Ali Ansari', relation: 'Brother of the Bride', photo: 'images/bride-brother1.jpg', focus: '50% 25%' },
+    { name: 'Nagma Ansari',  relation: 'Sister of the Bride',  photo: 'images/bride-sister1.jpg',  focus: '50% 25%' }
+  ],
+
+  /* PHOTOS — put the files in the "images" folder next to this HTML, using these names.
+     Missing files show a decorative placeholder, so you can add photos at any time.
+     File names are case-sensitive once hosted (couple.jpg ≠ Couple.JPG).
+     `focus` is the CSS object-position of the faces ('50% 30%' = centre, upper third),
+     so mobile crops keep faces in frame. */
+  photos: {
+    portraitMode: 'auto',                  // 'auto' | 'couple' | 'pair' | 'none'
+                                           // auto: couple.jpg if it exists, else groom.jpg + bride.jpg if both exist
+    // Full-length portrait of the groom (original: Groom.png; web copy re-saved as JPEG for speed)
+    // Couple illustration (original: bride-main.png; web copy re-saved as JPEG for speed)
+    mainPortrait:  { src: 'images/bride-main-web.jpeg', alt: 'Illustration of a bride and groom embracing beneath a floral arch', focus: '50% 38%' },
+    groomPortrait: { src: 'images/groom.jpg',  alt: 'Allauddin',                    focus: '50% 25%' },
+    bridePortrait: { src: 'images/bride.jpg',  alt: 'Noori Parveen',                focus: '50% 25%' },
+    // galleryPhotos: [
+    //   // Add or remove lines to change the number of photos. `full` (optional) = larger file for the zoom view.
+    //   { src: 'images/gallery-1.jpg', alt: '', caption: '', focus: '50% 50%' },
+    //   { src: 'images/gallery-2.jpg', alt: '', caption: '', focus: '50% 50%' },
+    //   { src: 'images/gallery-3.jpg', alt: '', caption: '', focus: '50% 50%' }
+    // ] 
+    
+        galleryPhotos: [
+      { src: 'https://images.pexels.com/photos/40467985/pexels-photo-40467985.jpeg?auto=compress&cs=tinysrgb&w=1200', alt: 'Masjid archway framing the moon in a night sky, with lanterns', caption: 'Moonlight over the masjid',         focus: '50% 40%' },
+      { src: 'https://images.unsplash.com/photo-1779599790541-2f50889661ed?w=1200&q=75&fm=jpg',                    alt: 'Ornate gold lantern glowing on a dark wall',                     caption: 'A warm light for a new beginning', focus: '50% 45%' },
+      { src: 'https://images.unsplash.com/photo-1792187762580-f0fb7787fae1?w=1200&q=65&fm=jpg',                    alt: 'Navy and gold Quran beside a lit lantern',                       caption: 'Guided by His words',              focus: '50% 55%' },
+      { src: 'https://images.pexels.com/photos/5707632/pexels-photo-5707632.jpeg?auto=compress&cs=tinysrgb&w=1200',  alt: 'Crescent moon in a deep navy sky',                               caption: 'Under the same crescent moon',     focus: '50% 30%' },
+      { src: 'https://images.pexels.com/photos/34332739/pexels-photo-34332739.jpeg?auto=compress&cs=tinysrgb&w=1000', alt: 'Teal and gold geometric pattern on a dome ceiling',            caption: 'Beauty in every detail',           focus: '50% 50%' }
+    ]// set [] to hide the gallery
+  },
+
+  animation: {
+    petals: true,                          // falling petals and roses
+    petalIntervalMs: 3000,                 // ongoing shower: a new piece every 3 s (after the opening burst)
+    maxPetals: 3,                          // only 2–3 pieces on screen at once after the opening shower
+    openingPetalBurst: 34,                 // size of the shower when the doors open (two waves)
+    maxBurstPetals: 45,
+    rosePetalShare: 0.55,                  // share of rose petals (0–1); the rest are soft petals
+    roseBloomShare: 0,                     // whole roses switched off (e.g. 0.15 to bring them back)
+    featuredPhotoZoom: true,               // slow zoom on the main couple photo only
+    galleryAutoplay: true,                 // gentle automatic crossfade (off for reduced-motion users)
+    galleryAutoplayMs: 2000,               // time each photo stays on screen
+    galleryResumeMs: 8000,                 // after a guest swipes/taps, resume autoplay after this pause
+    navGlideMinMs: 2000,                   // bottom-nav scroll: shortest glide (nearby section)
+    navGlideMaxMs: 4500,                   // longest glide (far section) — raise both to slow it down
+    navGlideMsPerPx: 1.1,                  // time per pixel of distance (higher = slower)
+    liteOnSlowDevices: true                // fewer effects on small / low-memory devices
+  },
+
+  music: {
+    enabled: true,                         // false = no music and no music button
+    url: 'images/Wedding-Nasheed.mp3',     // '' = soft generated instrumental instead
+    volume: 0.5,                           // 0–1 (iPhones ignore this and use the phone's volume)
+    fadeInMs: 3000                         // gentle fade-in after the tap
+  },
+
+  footer: 'The Family of Noori Parveen',
+
+  /* Optional background video behind the Bismillah, photo and names (top section only).
+     Put the file in the images folder. Missing file = no video, nothing breaks.
+     Not shown for reduced-motion or data-saver users; loads only after the doors open. */
+  heroVideo: {
+    enabled: true,
+    src: 'images/hero-bg1.mp4',            // Vecteezy "Elegant Islamic Frame with Lanterns" (2.6 MB)
+    overlay: 0.55,                         // darkness of the emerald layer over the video (0–1) — keeps text readable
+    speed: 1.6,                            // playback speed: 1 = original, 1.5–2 = livelier, 0.75 = calmer
+    // Vecteezy's Free License requires a credit; shown small in the footer when the video plays
+    credit: 'Background video by Vecteezy',
+    creditUrl: 'https://www.vecteezy.com/video/75481052-elegant-islamic-frame-with-lanterns-for-celebrations'
+  },
+
+  /* Background videos for other sections. `section` = the section's id:
+     coupleSection, eventsSection, location, rsvp, gallerySection …
+     Each loads only when the guest scrolls near it. Missing file = section shows normally. */
+  sectionVideos: [
+    {
+      enabled: true,
+      section: 'coupleSection',            // "Dear …" + the couple's names
+      src: 'images/hero-bg.mp4',           // ⚠ currently 227 MB — compress before publishing
+      overlay: 0.45,
+      speed: 1,
+      // If this clip is a free Vecteezy download, keep a credit (licence requirement); '' = none
+      credit: 'Background video by Vecteezy',
+      creditUrl: 'https://www.vecteezy.com/free-videos/muslim-wedding-background'
+    },
+    // Same clip reused below — the browser reuses the downloaded file, so no extra data
+    { enabled: true, section: 'countdownSection', src: 'images/hero-bg.mp4', overlay: 0.5,  speed: 1,
+      credit: 'Background video by Vecteezy', creditUrl: 'https://www.vecteezy.com/free-videos/muslim-wedding-background' },
+    { enabled: true, section: 'eventsSection',    src: 'images/hero-bg.mp4', overlay: 0.5,  speed: 1,
+      credit: 'Background video by Vecteezy', creditUrl: 'https://www.vecteezy.com/free-videos/muslim-wedding-background' },
+    { enabled: true, section: 'closingSection',   src: 'images/hero-bg.mp4', overlay: 0.5,  speed: 1,
+      credit: 'Background video by Vecteezy', creditUrl: 'https://www.vecteezy.com/free-videos/muslim-wedding-background' }
+  ]
+};
+
+/* =========================================================
+   APP
+   ========================================================= */
+(() => {
+  'use strict';
+
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const root = document.documentElement;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const A = CONFIG.animation;
+
+  // Lite mode for small or slower devices
+  const conn = navigator.connection || {};
+  const lite = A.liteOnSlowDevices && (
+    conn.saveData === true ||
+    (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+    (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+    Math.min(window.innerWidth, screen.width || 999) < 360
+  );
+  if (lite) root.classList.add('lite');
+
+  const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const phoneDigits = () => String(CONFIG.phone).replace(/\D/g, '');
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const svgUse = (id, cls) => {
+    const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    if (cls) s.setAttribute('class', cls);
+    s.setAttribute('aria-hidden', 'true');
+    const u = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+    u.setAttribute('href', '#' + id);
+    s.appendChild(u);
+    return s;
+  };
+
+  /* ---------- Date helpers (venue time zone) ---------- */
+  function parts(str) {
+    const m = String(str).match(/(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+    return { y: +m[1], mo: +m[2], d: +m[3], h: +m[4], mi: +m[5] };
+  }
+  function toDate(str) {
+    if (CONFIG.utcOffset) return new Date(`${str}:00${CONFIG.utcOffset}`);
+    const p = parts(str);
+    return new Date(p.y, p.mo - 1, p.d, p.h, p.mi);
+  }
+  function formatDate(str) {
+    const p = parts(str);
+    return `${DAYS[new Date(Date.UTC(p.y, p.mo - 1, p.d)).getUTCDay()]}, ${p.d} ${MONTHS[p.mo - 1]} ${p.y}`;
+  }
+  function formatTime(str) {
+    const p = parts(str);
+    return `${((p.h + 11) % 12) + 1}:${String(p.mi).padStart(2, '0')} ${p.h < 12 ? 'AM' : 'PM'}`;
+  }
+
+  /* ---------- Guest name (URL parameter, sanitised, rendered as text only) ---------- */
+  function readGuestName() {
+    let raw = null;
+    try { raw = new URLSearchParams(window.location.search).get(CONFIG.guest.param); } catch (e) { return null; }
+    if (raw == null) return null;
+    let name = raw.normalize ? raw.normalize('NFC') : raw;
+    name = name
+      .replace(/[\u0000-\u001F\u007F-\u009F\u2028\u2029]/g, ' ')  // control characters / line breaks
+      .replace(/[\u202A-\u202E\u2066-\u2069\u200E\u200F]/g, '')    // bidi overrides that could garble layout
+      .replace(/\s+/g, ' ')
+      .trim();                                                     // ZWJ/ZWNJ kept for Indic & Persian names
+    if (!name) return null;
+    // Limit by user-visible characters (grapheme clusters) so any script is cut safely
+    const graphemes = (typeof Intl !== 'undefined' && Intl.Segmenter)
+      ? Array.from(new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(name), (s) => s.segment)
+      : Array.from(name);
+    if (graphemes.length > CONFIG.guest.maxLength) name = graphemes.slice(0, CONFIG.guest.maxLength).join('').trim() + '…';
+    return name;
+  }
+  const guestName = readGuestName();
+
+  function renderGuest() {
+    const display = guestName || CONFIG.guest.fallbackName;
+    $('#introGuest').textContent = display;
+
+    // "Dear <name>," — the name sits in an isolated <bdi> so RTL names display correctly
+    const dear = $('#dearLine');
+    dear.textContent = '';
+    dear.append(document.createTextNode(CONFIG.guest.greeting + ' '));
+    const bdi = document.createElement('bdi');
+    bdi.textContent = display;
+    dear.append(bdi, document.createTextNode(','));
+
+    // The guest may *choose* to use their name in the RSVP — it is never added automatically
+    if (guestName) {
+      const chip = $('#useGuestName');
+      chip.textContent = `Use “${guestName}”`;
+      chip.hidden = false;
+      chip.addEventListener('click', () => { $('#rName').value = guestName.slice(0, 80); chip.hidden = true; $('#rName').focus(); });
+    }
+  }
+
+  /* ---------- Bind static text from CONFIG ---------- */
+  function bindText() {
+    const get = (path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), CONFIG);
+    $$('[data-bind]').forEach((n) => { const v = get(n.dataset.bind); if (v != null) n.textContent = v; });
+    document.title = `${CONFIG.bride.name} & ${CONFIG.groom.name} — Wedding Invitation`;
+    $('#heroDate').textContent = formatDate(CONFIG.countdownTo).replace(',', ' ·');
+  }
+
+  /* ---------- Stars (sparse) ---------- */
+  function makeStars(container, count) {
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < count; i++) {
+      const s = el('span', 'star');
+      s.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;--d:${(3 + Math.random() * 4).toFixed(2)}s;--delay:${(-Math.random() * 6).toFixed(2)}s`;
+      frag.appendChild(s);
+    }
+    container.appendChild(frag);
+  }
+
+  /* ---------- Petals: soft petals, rose petals and small rose blooms ---------- */
+  const petalLayer = $('#petals');
+  const PETAL_COLORS = [['#f7c6cc', '#e48a98'], ['#fbe3e6', '#f0a3b0'], ['#fbefc6', '#c9a23a']];
+  const ROSE_COLORS = [['#ff6b81', '#b3123a'], ['#ff8fa3', '#c9184a'], ['#e63950', '#8b0a26'], ['#ffc2cf', '#e0566f']];
+  // Static SVG roses (no user data) — crimson and blush variants
+  const roseSVG = (outer, inner, line) =>
+    `<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M23 27c3.5.2 6.4-2.1 7.4-5.4-3.4-.2-6.4 2-7.4 5.4z" fill="#2f7d50"/>` +
+    `<circle cx="15" cy="15" r="13" fill="${outer}"/><circle cx="15" cy="15" r="9.5" fill="${inner}"/>` +
+    `<path d="M15 8.5c3.8 0 6.2 2.9 5.7 6.2-.5 2.9-3.3 4.6-6 4-2.4-.5-3.6-2.9-2.9-5 .8-1.9 3.1-2.5 4.4-1.3 1.1 1 .8 2.7-.3 3" fill="none" stroke="${line}" stroke-width="1.5" stroke-linecap="round"/>` +
+    `<path d="M4 18.5c1.8 3 4.8 5 8 5.6M26 18.5c-1.8 3-4.8 5-8 5.6" fill="none" stroke="${line}" stroke-width="1.1" opacity=".7"/></svg>`;
+  const ROSES = [roseSVG('#b3123a', '#d9294f', '#6e0820'), roseSVG('#e0566f', '#f48ba0', '#a3193a')];
+  let petalTimer = null;
+  const petalsOn = A.petals && !reduceMotion;
+
+  function spawnPetal(burst) {
+    if (!petalsOn) return;
+    // The opening shower and the ongoing shower have separate limits, so the
+    // ongoing shower starts right away instead of waiting for the burst to clear
+    const ongoing = petalLayer.querySelectorAll('.petal.cont').length;
+    if (burst ? petalLayer.childElementCount >= A.maxBurstPetals : ongoing >= (lite ? Math.ceil(A.maxPetals / 2) : A.maxPetals)) return;
+    // Mix: ~40% soft petals, ~45% rose petals, ~15% whole roses
+    const r = Math.random();
+    const kind = r < A.rosePetalShare ? 'rose' : (r < A.rosePetalShare + A.roseBloomShare ? 'bloom' : 'soft');
+    const p = el('span', 'petal' + (kind === 'soft' ? '' : ' ' + kind) + (burst ? '' : ' cont'));
+    const [c1, c2] = (kind === 'rose' ? ROSE_COLORS : PETAL_COLORS)[(Math.random() * (kind === 'rose' ? ROSE_COLORS : PETAL_COLORS).length) | 0];
+    const set = (k, v) => p.style.setProperty(k, v);
+    set('--x', `${Math.random() * 100}%`);
+    set('--y', burst ? `${-8 - Math.random() * 14}vh` : '-40px');      // shower starts just above the top edge
+    const size = kind === 'bloom' ? 18 + Math.random() * 10 : 9 + Math.random() * (kind === 'rose' ? 9 : 8);
+    set('--size', `${size}px`);
+    set('--dur', `${(burst ? 6.5 : 8) + Math.random() * 4}s`);
+    set('--delay', burst ? `${(Math.random() * 1.4).toFixed(2)}s` : '0s');
+    set('--drift', `${(Math.random() - 0.5) * (burst ? 300 : 160)}px`);
+    set('--sway', `${(kind === 'bloom' ? 5 : 2) + Math.random() * 1.8}s`);
+    set('--c1', c1); set('--c2', c2);
+    const inner = document.createElement('i');
+    if (kind === 'bloom') inner.innerHTML = ROSES[(Math.random() * ROSES.length) | 0];
+    p.appendChild(inner);
+    p.addEventListener('animationend', (e) => { if (e.target === p) p.remove(); });
+    petalLayer.appendChild(p);
+  }
+  // Opening shower: two gentle waves from the top
+  function petalShower() {
+    const n = lite ? 10 : A.openingPetalBurst;
+    for (let i = 0; i < Math.ceil(n * 0.6); i++) spawnPetal(true);
+    setTimeout(() => { for (let i = 0; i < Math.floor(n * 0.4); i++) spawnPetal(true); }, 1600);
+  }
+  // Ongoing shower — keeps falling for as long as the invitation is open
+  // (half the rate on small / low-memory phones, but never switched off)
+  function startPetals() {
+    if (!petalsOn || petalTimer) return;
+    petalTimer = setInterval(() => spawnPetal(false), lite ? A.petalIntervalMs * 2 : A.petalIntervalMs);
+  }
+  function stopPetals() { clearInterval(petalTimer); petalTimer = null; }
+
+  /* ---------- Music (optional; starts only after the tap) ---------- */
+  const Music = {
+    started: false, muted: false, audio: null, ctx: null, timer: null,
+
+    start() {
+      if (!CONFIG.music.enabled || this.started) return;
+      this.started = true;
+      if (CONFIG.music.url) {
+        const a = this.audio = new Audio();
+        a.loop = true;
+        a.preload = 'auto';
+        a.volume = 0;
+        // If the file is missing or can't play, fall back to the generated instrumental
+        a.addEventListener('error', () => { if (this.audio === a) { this.audio = null; this.startSynth(); } }, { once: true });
+        a.src = CONFIG.music.url;
+        // play() is called directly inside the tap, which browsers require for sound
+        a.play().then(() => {
+          const target = CONFIG.music.volume, steps = 30, ms = (CONFIG.music.fadeInMs || 0) / steps;
+          if (!ms) { a.volume = target; return; }
+          let k = 0;
+          const fade = setInterval(() => { k++; a.volume = Math.min(target, target * k / steps); if (k >= steps) clearInterval(fade); }, ms);
+        }).catch(() => {});
+      } else {
+        this.startSynth();
+      }
+      $('#musicBtn').hidden = false;
+    },
+
+    // Gentle drone + slow Hijaz-mode notes through a soft reverb (Web Audio — no file needed)
+    startSynth() {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      const ctx = this.ctx = new AC();
+      const master = ctx.createGain();
+      master.gain.value = 0;
+      master.gain.linearRampToValueAtTime(0.44 * CONFIG.music.volume, ctx.currentTime + 4);
+      master.connect(ctx.destination);
+
+      const reverb = ctx.createConvolver();
+      const len = ctx.sampleRate * 3.5, ir = ctx.createBuffer(2, len, ctx.sampleRate);
+      for (let ch = 0; ch < 2; ch++) {
+        const d = ir.getChannelData(ch);
+        for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+      }
+      reverb.buffer = ir;
+      const wet = ctx.createGain(); wet.gain.value = 0.55;
+      reverb.connect(wet).connect(master);
+
+      const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 600;
+      const drone = ctx.createGain(); drone.gain.value = 0.16;
+      lp.connect(drone); drone.connect(master); drone.connect(reverb);
+      [73.42, 110, 146.83].forEach((f, i) => {
+        const o = ctx.createOscillator();
+        o.type = i === 1 ? 'triangle' : 'sine';
+        o.frequency.value = f; o.detune.value = (i - 1) * 4;
+        o.connect(lp); o.start();
+      });
+      const lfo = ctx.createOscillator(), lfoGain = ctx.createGain();
+      lfo.frequency.value = 0.08; lfoGain.gain.value = 0.06;
+      lfo.connect(lfoGain).connect(drone.gain); lfo.start();
+
+      const scale = [293.66, 311.13, 369.99, 392.0, 440.0, 466.16, 523.25, 587.33]; // D Hijaz
+      let idx = 4;
+      const note = () => {
+        if (ctx.state === 'running') {
+          idx = Math.max(0, Math.min(scale.length - 1, idx + [-2, -1, -1, 0, 1, 1, 2][(Math.random() * 7) | 0]));
+          const t = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'triangle'; o.frequency.value = scale[idx];
+          g.gain.setValueAtTime(0, t);
+          g.gain.linearRampToValueAtTime(0.18, t + 0.04);
+          g.gain.exponentialRampToValueAtTime(0.0001, t + 2.8);
+          o.connect(g); g.connect(master); g.connect(reverb);
+          o.start(t); o.stop(t + 3);
+        }
+        this.timer = setTimeout(note, 900 + Math.random() * 1400);
+      };
+      this.timer = setTimeout(note, 1500);
+    },
+
+    apply(silent) {
+      if (this.audio) silent ? this.audio.pause() : this.audio.play().catch(() => {});
+      if (this.ctx) silent ? this.ctx.suspend() : this.ctx.resume();
+    },
+    toggle() {
+      this.muted = !this.muted;
+      this.apply(this.muted);
+      const btn = $('#musicBtn');
+      btn.setAttribute('aria-label', this.muted ? 'Unmute music' : 'Mute music');
+      $('use', btn).setAttribute('href', this.muted ? '#i-mute' : '#i-sound');
+      $('span', btn).textContent = this.muted ? 'Muted' : 'Music';
+    },
+    onVisibility(hidden) { if (this.started && !this.muted) this.apply(hidden); }
+  };
+
+  /* ---------- Cinematic opening (one coordinated ~3 s sequence) ---------- */
+  let nav = null;   // bottom navigation controller (set up during init)
+
+  /* ---------- Background videos (hero + optional sections) ---------- */
+  const videoAllowed = () => !reduceMotion && (navigator.connection || {}).saveData !== true;
+
+  // Plays V.src muted & looping inside `box`; removes the box if the file is missing.
+  function attachBgVideo(box, V) {
+    box.style.setProperty('--veil', V.overlay != null ? V.overlay : 0.55);
+    const v = document.createElement('video');
+    v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');   // required for inline autoplay on iPhone
+    v.preload = 'auto';
+    // Playback speed (kept across loops; some browsers reset it when the source loads)
+    const rate = Math.min(4, Math.max(0.25, +V.speed || 1));
+    const applyRate = () => { v.defaultPlaybackRate = rate; v.playbackRate = rate; };
+    v.addEventListener('loadedmetadata', applyRate);
+    v.addEventListener('play', applyRate);
+    v.addEventListener('error', () => box.remove(), { once: true });  // missing / unsupported file → no video
+    v.addEventListener('playing', () => { box.classList.add('ready'); addCredit(V); }, { once: true });
+    v.src = V.src;
+    box.appendChild(v);
+    v.play().catch(() => {});   // low-power mode may block autoplay → the normal background stays
+    // Save battery: play only while on screen and the page is visible
+    let onScreen = true;
+    const sync = () => { if (onScreen && !document.hidden) v.play().catch(() => {}); else v.pause(); };
+    if ('IntersectionObserver' in window) new IntersectionObserver((e) => { onScreen = e[0].isIntersecting; sync(); }).observe(box);
+    document.addEventListener('visibilitychange', sync);
+  }
+  // Footer credit line(s) — one per distinct credit, shown only once that video plays
+  function addCredit(V) {
+    const c = $('#videoCredit');
+    if (!V.credit || !c || $$('a, span', c).some((n) => n.textContent === V.credit)) return;
+    const a = el(V.creditUrl ? 'a' : 'span', null, V.credit);
+    if (V.creditUrl) { a.href = V.creditUrl; a.target = '_blank'; a.rel = 'noopener'; }
+    if (c.childElementCount) c.appendChild(document.createTextNode(' · '));
+    c.appendChild(a); c.hidden = false;
+  }
+
+  function startHeroVideo() {
+    const V = CONFIG.heroVideo, box = $('#heroVideo');
+    if (!V || !V.enabled || !V.src || !videoAllowed()) { box.remove(); return; }
+    attachBgVideo(box, V);
+  }
+
+  // Section videos load only when the guest scrolls near them (keeps the page light)
+  function setupSectionVideos() {
+    (CONFIG.sectionVideos || []).forEach((V) => {
+      const sec = document.getElementById(V.section);
+      if (!sec || !V.enabled || !V.src || !videoAllowed()) return;
+      const box = el('div', 'section-video');
+      box.setAttribute('aria-hidden', 'true');
+      sec.classList.add('has-bg-video');
+      sec.prepend(box);
+      const go = () => attachBgVideo(box, V);
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((e) => { if (e[0].isIntersecting) { io.disconnect(); go(); } }, { rootMargin: '500px 0px' });
+        io.observe(sec);
+      } else go();
+    });
+  }
+  let opened = false;
+  function openInvitation() {
+    if (opened) return;                    // repeated taps never restart the sequence
+    opened = true;
+    const intro = $('#intro');
+    Music.start();
+
+    const finish = () => {
+      intro.classList.add('done');                     // e. intro fades as the hero fades in
+      document.body.classList.remove('locked');
+      document.body.classList.add('opened');
+      $('#main').inert = false;
+      $('#quickbar').inert = false;
+      if (nav) nav.refresh();
+      $('#hero').focus({ preventScroll: true });       // move keyboard focus into the invitation
+      startPetals();
+      startHeroVideo();
+      setupSectionVideos();
+      setTimeout(() => intro.remove(), 1000);
+    };
+
+    if (reduceMotion) {                                // simplified reveal: a calm crossfade
+      intro.classList.add('tapped', 'opening');
+      setTimeout(finish, 250);
+      return;
+    }
+    intro.classList.add('tapped');                                    // a. seal glows
+    setTimeout(() => intro.classList.add('opening'), 380);            // b–c. doors swing, light rises
+    setTimeout(petalShower, 1000);                                    // d. petal & rose shower
+    setTimeout(finish, 2500);                                         // e. names + portrait
+  }
+
+  /* ---------- Reveal sections once as they enter the viewport ---------- */
+  function setupReveal() {
+    const items = $$('.reveal');
+    if (!('IntersectionObserver' in window)) { items.forEach((n) => n.classList.add('visible')); return; }
+    const pending = new Set(items);
+    const reveal = (n) => { n.classList.add('visible'); io.unobserve(n); pending.delete(n); };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) reveal(e.target); });
+      // A fast flick can jump right over a section without it ever "entering" the screen;
+      // reveal anything still hidden that is now above the viewport.
+      pending.forEach((n) => { if (n.getBoundingClientRect().bottom < 0) reveal(n); });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    items.forEach((n) => io.observe(n));
+  }
+
+  /* ---------- Photos ---------- */
+  function placeholder(kind, initials) {
+    const ph = el('div', 'ph');
+    ph.setAttribute('role', 'img');
+    ph.setAttribute('aria-label', 'Decorative placeholder — photograph to be added');
+    if (kind === 'mono') {
+      ph.appendChild(svgUse('i-crescent'));
+      ph.appendChild(el('span', 'mono', initials || `${CONFIG.bride.name[0]} & ${CONFIG.groom.name[0]}`));
+    } else {
+      ph.appendChild(svgUse('i-star8'));
+    }
+    return ph;
+  }
+  // Builds an <img> with focal point; falls back to the placeholder if the file is missing
+  function photoImg(photo, fallbackKind, featured, initials) {
+    const img = new Image();
+    img.decoding = 'async';
+    img.alt = photo.alt || '';
+    img.style.objectPosition = photo.focus || '50% 50%';
+    if (featured && CONFIG.animation.featuredPhotoZoom) {
+      img.classList.add('featured');
+      img.style.transformOrigin = photo.focus || '50% 50%';  // zoom towards the faces, never away
+    }
+    img.addEventListener('error', () => img.replaceWith(placeholder(fallbackKind, initials)), { once: true });
+    img.src = photo.src;
+    return img;
+  }
+  function archFrame(photo, kind, featured) {
+    const frame = el('div', 'arch-frame');
+    const inner = el('div', 'arch-inner');
+    inner.appendChild(photo && photo.src ? photoImg(photo, kind, featured) : placeholder(kind));
+    frame.appendChild(inner);
+    return frame;
+  }
+
+  // Resolves true if the image file exists and loads
+  const imageExists = (src) => new Promise((resolve) => {
+    if (!src) { resolve(false); return; }
+    const probe = new Image();
+    probe.onload = () => resolve(true);
+    probe.onerror = () => resolve(false);
+    probe.src = src;
+  });
+
+  function renderPortrait() {
+    const P = CONFIG.photos, box = $('#portrait');
+    const draw = (mode) => {
+      box.textContent = '';
+      box.classList.toggle('pair', mode === 'pair');
+      if (mode === 'pair') {
+        // Individual portraits stay still and fully visible; names sit below, never over faces
+        [[P.bridePortrait, CONFIG.bride.name], [P.groomPortrait, CONFIG.groom.name]].forEach(([photo, name]) => {
+          const fig = el('figure');
+          fig.appendChild(archFrame(photo, 'mono', false));
+          fig.appendChild(el('figcaption', null, name));
+          box.appendChild(fig);
+        });
+      } else {
+        box.appendChild(archFrame(P.mainPortrait, 'mono', !reduceMotion));
+      }
+    };
+    if (P.portraitMode === 'none') { box.remove(); return; }
+    if (P.portraitMode !== 'auto') { draw(P.portraitMode); return; }
+
+    // Auto: show the couple photo (or its placeholder) at once; if that file is missing
+    // but both individual portraits exist, switch to the pair.
+    draw('couple');
+    imageExists(P.mainPortrait.src).then(async (hasCouple) => {
+      if (hasCouple) return;
+      const [hasGroom, hasBride] = await Promise.all([imageExists(P.groomPortrait.src), imageExists(P.bridePortrait.src)]);
+      if (hasGroom && hasBride) draw('pair');
+    });
+  }
+
+  /* ---------- Gallery: crossfade, swipe, dots, lazy loading, lightbox ---------- */
+  function setupGallery() {
+    const photos = CONFIG.photos.galleryPhotos || [];
+    if (!photos.length) { $('#gallerySection').remove(); return; }
+    const n = photos.length;
+    const clip = $('#galleryClip'), dots = $('#gDots'), counter = $('#gCounter'), caption = $('#gCaption');
+    const stage = $('#galleryStage');
+    const altFor = (p, i) => p.alt || `Photograph ${i + 1} of ${n}`;
+    let idx = 0, nearViewport = false;
+
+    const slides = photos.map((p, i) => {
+      const fig = el('figure', 'g-slide');
+      fig.setAttribute('aria-roledescription', 'slide');
+      fig.setAttribute('aria-label', `${i + 1} of ${n}`);
+      if (!p.src) fig.appendChild(placeholder('star'));
+      clip.appendChild(fig);
+      return fig;
+    });
+    // Lazy-load: only the current and neighbouring photos, once the gallery is near view
+    const ensure = (i) => {
+      const p = photos[i], fig = slides[i];
+      if (!p.src || fig.dataset.loaded) return;
+      fig.dataset.loaded = '1';
+      fig.appendChild(photoImg({ ...p, alt: altFor(p, i) }, 'star', false));
+    };
+    const loadAround = () => { if (!nearViewport) return; [idx, (idx + 1) % n, (idx - 1 + n) % n].forEach(ensure); };
+
+    const dotBtns = photos.map((_, i) => {
+      const b = el('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', `Show photograph ${i + 1} of ${n}`);
+      b.addEventListener('click', () => { show(i); nudge(); });
+      dots.appendChild(b);
+      return b;
+    });
+
+    function show(i) {
+      idx = (i % n + n) % n;
+      slides.forEach((s, k) => { s.classList.toggle('active', k === idx); s.setAttribute('aria-hidden', String(k !== idx)); });
+      dotBtns.forEach((b, k) => b.setAttribute('aria-current', String(k === idx)));
+      counter.textContent = `${idx + 1} / ${n}`;
+      caption.textContent = photos[idx].caption || '';
+      loadAround();
+    }
+    const next = () => show(idx + 1), prev = () => show(idx - 1);
+
+    /* Autoplay — a gentle crossfade every few seconds, only while the gallery is on screen.
+       Rests after a guest swipes/taps (then resumes),
+       stops for the lightbox and hidden tabs, and waits for the next photo to finish loading.
+       The Pause button stops it until pressed again. Off for prefers-reduced-motion. */
+    const playBtn = $('#gPlay');
+    const autoOK = A.galleryAutoplay && !reduceMotion && n > 1;
+    let autoTimer = null, resumeTimer = null, inView = false, userPaused = false;
+    const slideReady = (i) => {
+      if (!photos[i].src) return true;
+      const img = slides[i].querySelector('img');
+      return !!img && img.complete;
+    };
+    const tick = () => { const k = (idx + 1) % n; if (slideReady(k)) next(); else loadAround(); };
+    function startAuto() {
+      if (!autoOK || autoTimer || userPaused || !inView || document.hidden || $('#lightbox').open) return;
+      autoTimer = setInterval(tick, A.galleryAutoplayMs);
+    }
+    function stopAuto() { clearInterval(autoTimer); autoTimer = null; }
+    function nudge() { stopAuto(); clearTimeout(resumeTimer); resumeTimer = setTimeout(startAuto, A.galleryResumeMs); }
+    if (autoOK) {
+      playBtn.hidden = false;
+      playBtn.addEventListener('click', () => {
+        userPaused = !userPaused;
+        playBtn.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
+        $('use', playBtn).setAttribute('href', userPaused ? '#i-play' : '#i-pause');
+        clearTimeout(resumeTimer);
+        if (userPaused) stopAuto(); else { next(); startAuto(); }
+      });
+      document.addEventListener('visibilitychange', () => { if (document.hidden) stopAuto(); else startAuto(); });
+      if ('IntersectionObserver' in window) {
+        // "On screen" = at least a quarter of the gallery visible, so short windows and
+        // landscape phones (where half the gallery may never fit) still play
+        new IntersectionObserver((entries) => {
+          inView = entries[entries.length - 1].isIntersecting;
+          if (inView) startAuto(); else stopAuto();
+        }, { threshold: 0.25 }).observe(stage);
+      } else { inView = true; startAuto(); }
+    }
+
+    $('#gNext').addEventListener('click', () => { next(); nudge(); });
+    $('#gPrev').addEventListener('click', () => { prev(); nudge(); });
+    if (n < 2) { $('.g-controls').hidden = true; counter.hidden = true; }
+
+    // Swipe (touch / pen / mouse drag); a simple tap opens the larger view
+    function swipe(target, onLeft, onRight, onTap) {
+      let x0 = null, y0 = 0;
+      target.addEventListener('pointerdown', (e) => { if (e.button === 0) { x0 = e.clientX; y0 = e.clientY; } });
+      target.addEventListener('pointerup', (e) => {
+        if (x0 == null) return;
+        const dx = e.clientX - x0, dy = e.clientY - y0;
+        x0 = null;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? onLeft : onRight)();
+        else if (onTap && Math.abs(dx) < 8 && Math.abs(dy) < 8 && !e.target.closest('button')) onTap();
+      });
+      target.addEventListener('pointercancel', () => { x0 = null; });
+    }
+    swipe(stage, () => { next(); nudge(); }, () => { prev(); nudge(); }, () => openLightbox());
+    // Stop native image dragging so mouse drags act as swipes
+    [stage, $('#lbInner')].forEach((t) => t.addEventListener('dragstart', (e) => e.preventDefault()));
+    stage.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { next(); nudge(); }
+      else if (e.key === 'ArrowLeft') { prev(); nudge(); }
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(); }
+    });
+    $('#gExpand').addEventListener('click', () => openLightbox());
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) { nearViewport = true; loadAround(); io.disconnect(); }
+      }, { rootMargin: '400px 0px' });
+      io.observe(stage);
+    } else { nearViewport = true; }
+
+    /* Lightbox */
+    const dlg = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCaption'), lbCount = $('#lbCounter');
+    let lbIdx = 0, opener = null;
+    const phSrc = (i) => {   // decorative placeholder for the large view when no photo yet
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><defs><pattern id='p' width='50' height='50' patternUnits='userSpaceOnUse'><g fill='none' stroke='#c9a23a' stroke-opacity='.3'><rect x='14' y='14' width='22' height='22'/><rect x='14' y='14' width='22' height='22' transform='rotate(45 25 25)'/></g></pattern><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#0f5240'/><stop offset='1' stop-color='#06261d'/></linearGradient></defs><rect width='400' height='500' fill='url(#g)'/><rect width='400' height='500' fill='url(#p)'/><g transform='translate(200 250)' fill='none' stroke='#ecd48a' stroke-width='3'><rect x='-40' y='-40' width='80' height='80'/><rect x='-40' y='-40' width='80' height='80' transform='rotate(45)'/></g></svg>`;
+      return 'data:image/svg+xml,' + encodeURIComponent(svg);
+    };
+    function lbShow(i) {
+      lbIdx = (i % n + n) % n;
+      const p = photos[lbIdx];
+      lbImg.style.opacity = '0';
+      setTimeout(() => {
+        lbImg.src = p.src ? (p.full || p.src) : phSrc(lbIdx);
+        lbImg.alt = p.src ? altFor(p, lbIdx) : 'Decorative placeholder — photograph to be added';
+      }, reduceMotion ? 0 : 180);
+      lbCap.textContent = p.caption || '';
+      lbCount.textContent = `${lbIdx + 1} / ${n}`;
+      show(lbIdx);   // keep the inline gallery in sync
+    }
+    lbImg.addEventListener('load', () => { lbImg.style.opacity = '1'; });
+    lbImg.addEventListener('error', () => { lbImg.src = phSrc(lbIdx); });
+    function openLightbox() {
+      opener = document.activeElement;
+      stopAuto();
+      lbShow(idx);
+      document.body.classList.add('lb-open');
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+      $('#lbClose').focus();
+    }
+    function closeLightbox() { if (typeof dlg.close === 'function') dlg.close(); else { dlg.removeAttribute('open'); onClose(); } }
+    function onClose() {
+      document.body.classList.remove('lb-open');
+      if (opener && opener.focus) opener.focus({ preventScroll: true });
+      nudge();                                                   // resume the slideshow after a short rest
+    }
+    dlg.addEventListener('close', onClose);                     // Escape is handled natively by <dialog>
+    dlg.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') lbShow(lbIdx + 1);
+      if (e.key === 'ArrowLeft') lbShow(lbIdx - 1);
+      if (e.key === 'Escape' && typeof dlg.showModal !== 'function') closeLightbox();
+    });
+    dlg.addEventListener('click', (e) => { if (e.target === dlg || e.target.id === 'lbInner') closeLightbox(); });
+    $('#lbClose').addEventListener('click', closeLightbox);
+    $('#lbNext').addEventListener('click', () => lbShow(lbIdx + 1));
+    $('#lbPrev').addEventListener('click', () => lbShow(lbIdx - 1));
+    swipe($('#lbInner'), () => lbShow(lbIdx + 1), () => lbShow(lbIdx - 1));
+    if (n < 2) { $('#lbNext').hidden = true; $('#lbPrev').hidden = true; }
+
+    show(0);
+  }
+
+  /* ---------- Countdown (venue time zone) ---------- */
+  function setupCountdown() {
+    const target = toDate(CONFIG.countdownTo).getTime();
+    const els = {};
+    $$('[data-unit]').forEach((n) => { els[n.dataset.unit] = n; });
+    const note = $('#countdownNote');
+    note.textContent = `${formatDate(CONFIG.countdownTo)} · ${formatTime(CONFIG.countdownTo)} ${CONFIG.timezoneLabel}`.trim();
+    let timer;
+    const set = (unit, val) => {
+      const n = els[unit], txt = String(val).padStart(2, '0');
+      if (n.textContent === txt) return;
+      n.textContent = txt;
+      if (!reduceMotion && !document.hidden) { n.classList.remove('flip'); void n.offsetWidth; n.classList.add('flip'); }
+    };
+    const tick = () => {
+      const left = target - Date.now();
+      let diff = Math.max(0, left);
+      const d = Math.floor(diff / 864e5); diff -= d * 864e5;
+      const h = Math.floor(diff / 36e5);  diff -= h * 36e5;
+      const m = Math.floor(diff / 6e4);   diff -= m * 6e4;
+      set('days', d); set('hours', h); set('minutes', m); set('seconds', Math.floor(diff / 1e3));
+      if (left <= 0) { note.textContent = 'Alhamdulillah — the Nikah has taken place. Thank you for your duas!'; clearInterval(timer); }
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+  }
+
+  /* ---------- Events (staggered reveal) ---------- */
+  function renderEvents() {
+    const wrap = $('#events');
+    CONFIG.events.forEach((ev, i) => {
+      const card = el('article', 'card arch event reveal');
+      card.dataset.anim = i % 2 ? 'flip-r' : 'flip';   // alternate the turning direction
+      card.style.setProperty('--stagger', `${i * 140}ms`);
+      card.appendChild(el('div', 'card-pattern'));
+      const icon = el('div', 'event-icon');
+      icon.appendChild(svgUse(ev.icon));
+      card.appendChild(icon);
+      card.appendChild(el('h3', null, ev.title));
+      card.appendChild(el('p', 'date', formatDate(ev.start)));
+      card.appendChild(el('p', 'time', `${formatTime(ev.start)}${ev.timeSuffix ? ' ' + ev.timeSuffix : ''}`));
+      if (ev.note) card.appendChild(el('p', 'note', ev.note));
+      wrap.appendChild(card);
+    });
+    if (CONFIG.utcOffset) $('#tzNote').textContent = `All times are ${CONFIG.timezoneName} (${CONFIG.timezoneLabel}).`;
+    else $('#tzNote').remove();
+  }
+
+  /* ---------- Location ---------- */
+  function setupLocation() {
+    const v = CONFIG.venue;
+    $('#directionsBtn').href = v.mapLink;
+
+    const box = $('#venueMap');
+    // Fallback: Google's embedded map (cannot carry a custom label or animation)
+    const googleFallback = () => {
+      if (box.dataset.ready) return;
+      box.dataset.ready = 'google';
+      box.textContent = '';
+      const f = document.createElement('iframe');
+      f.title = 'Map showing the wedding venue';
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      const q = v.mapQuery || [v.name, v.address].filter(Boolean).join(', ');
+      f.src = `https://www.google.com/maps?q=${encodeURIComponent(q)}&z=${v.mapZoom || 16}&output=embed`;
+      box.appendChild(f);
+    };
+    if (v.lat == null || v.lng == null) { googleFallback(); return; }
+
+    // Load Leaflet (small open-source map library) only when the map is about to be seen
+    const loadLeaflet = () => new Promise((resolve, reject) => {
+      if (window.L) { resolve(window.L); return; }
+      const css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      css.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+      css.crossOrigin = '';
+      document.head.appendChild(css);
+      const js = document.createElement('script');
+      js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      js.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+      js.crossOrigin = '';
+      js.onload = () => (window.L ? resolve(window.L) : reject());
+      js.onerror = reject;
+      document.head.appendChild(js);
+      setTimeout(reject, 12000);   // slow network → fall back
+    });
+
+    const build = (L) => {
+      if (box.dataset.ready) return;
+      box.dataset.ready = 'leaflet';
+      const pos = [v.lat, v.lng];
+      const map = L.map(box, {
+        center: pos, zoom: v.mapZoom || 17,
+        scrollWheelZoom: false,          // never hijack page scrolling
+        dragging: !L.Browser.mobile,     // one-finger swipes keep scrolling the page on phones
+        tap: false, zoomControl: true, attributionControl: true
+      });
+      const layers = {
+        'Satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+          // Real imagery exists up to zoom 18 here; beyond that, enlarge it instead of showing "not available"
+          maxNativeZoom: 18, maxZoom: 19, attribution: 'Imagery © Esri'
+        }),
+        // Esri street map (OpenStreetMap's own servers block pages opened as local files)
+        'Map': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+          // Street detail exists up to zoom 17 here; deeper zooms enlarge it
+          maxNativeZoom: 17, maxZoom: 19, attribution: 'Map © Esri, HERE, Garmin, OpenStreetMap contributors'
+        })
+      };
+      let current = v.mapStyle === 'map' ? 'Map' : 'Satellite';
+      layers[current].addTo(map);
+      // Compact toggle (bottom-left) so nothing covers the pin label on small screens
+      const Toggle = L.Control.extend({
+        onAdd() {
+          const b = L.DomUtil.create('button', 'map-toggle');
+          b.type = 'button';
+          const label = () => { b.textContent = current === 'Map' ? 'Satellite' : 'Map'; b.setAttribute('aria-label', `Show ${b.textContent.toLowerCase()} view`); };
+          label();
+          L.DomEvent.disableClickPropagation(b);
+          b.addEventListener('click', () => {
+            map.removeLayer(layers[current]);
+            current = current === 'Map' ? 'Satellite' : 'Map';
+            layers[current].addTo(map);
+            label();
+          });
+          return b;
+        }
+      });
+      new Toggle({ position: 'bottomleft' }).addTo(map);
+
+      // Custom marker: built with DOM text (label is never parsed as HTML)
+      const wrap = document.createElement('div');
+      wrap.className = 'vpin';
+      wrap.innerHTML = '<span class="ripple"></span><span class="ripple r2"></span><span class="glow"></span>' +
+        '<svg class="pin" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 1C9.5 1 1 9.3 1 19.6 1 33 20 51 20 51s19-18 19-31.4C39 9.3 30.5 1 20 1z" fill="#0b3d2e" stroke="#c9a23a" stroke-width="2"/>' +
+        '<circle cx="20" cy="19" r="11" fill="#fbf6ea"/><path d="M22.6 11.5a8 8 0 1 0 4.9 13 6.6 6.6 0 1 1-4.9-13z" fill="#c9a23a"/></svg>';
+      if (v.pinLabel) wrap.appendChild(el('span', 'label', v.pinLabel));
+      const icon = L.divIcon({ html: wrap, className: '', iconSize: [40, 52], iconAnchor: [20, 52] });
+      const marker = L.marker(pos, { icon, title: v.pinLabel || v.name, keyboard: true, riseOnHover: true }).addTo(map);
+      marker.on('click', () => window.open(v.mapLink, '_blank', 'noopener'));  // tap the pin → Google Maps
+      // Keep the label in view: centre slightly below the pin
+      map.panBy([0, -30], { animate: false });
+      setTimeout(() => map.invalidateSize(), 300);
+    };
+
+    const start = () => loadLeaflet().then(build).catch(googleFallback);
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) { io.disconnect(); start(); }
+      }, { rootMargin: '600px 0px' });
+      io.observe(box);
+    } else { start(); }
+  }
+
+  /* ---------- Calendar (.ics, times converted to UTC from the venue offset) ---------- */
+  const icsStamp = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  function icsDate(str) {
+    if (CONFIG.utcOffset) return icsStamp(toDate(str));
+    const p = parts(str), z = (x) => String(x).padStart(2, '0');
+    return `${p.y}${z(p.mo)}${z(p.d)}T${z(p.h)}${z(p.mi)}00`;
+  }
+  const icsText = (s) => String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+
+  function downloadICS(ev) {
+    const couple = `${CONFIG.bride.name} & ${CONFIG.groom.name}`;
+    const location = [CONFIG.venue.name, CONFIG.venue.address].filter(Boolean).join(', ');
+    const start = icsDate(ev.start);
+    const end = ev.end ? icsDate(ev.end)
+      : (CONFIG.utcOffset ? icsStamp(new Date(toDate(ev.start).getTime() + CONFIG.calendarDefaultMinutes * 6e4))
+                          : icsDate(ev.start));
+    const lines = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Wedding Invitation//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      `UID:${ev.id}-${start}@wedding-invitation`,
+      `DTSTAMP:${icsStamp(new Date())}`,
+      `DTSTART:${start}`,
+      `DTEND:${end}`,
+      `SUMMARY:${icsText(`${ev.title} — ${couple}`)}`,
+      `LOCATION:${icsText(location)}`,
+      `DESCRIPTION:${icsText(`${ev.title} of ${couple}.${ev.note ? ' ' + ev.note + '.' : ''}\nDirections: ${CONFIG.venue.mapLink}`)}`,
+      `URL:${CONFIG.venue.mapLink}`,
+      'BEGIN:VALARM', 'TRIGGER:-PT3H', 'ACTION:DISPLAY', `DESCRIPTION:${icsText(ev.title)}`, 'END:VALARM',
+      'END:VEVENT', 'END:VCALENDAR'
+    ];
+    const url = URL.createObjectURL(new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' }));
+    const a = el('a');
+    a.href = url;
+    a.download = `${ev.id}-${CONFIG.bride.name}-${CONFIG.groom.name}.ics`.replace(/\s+/g, '-');
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    toast(`${ev.title} calendar file downloaded`);
+  }
+  function renderCalendarButtons() {
+    const wrap = $('#calButtons');
+    CONFIG.events.forEach((ev) => {
+      const b = el('button', 'btn dark-ghost');
+      b.type = 'button';
+      b.appendChild(svgUse('i-cal'));
+      b.appendChild(document.createTextNode(' ' + ev.title));
+      b.setAttribute('aria-label', `Add ${ev.title} to calendar`);
+      b.addEventListener('click', () => downloadICS(ev));
+      wrap.appendChild(b);
+    });
+  }
+
+  /* ---------- RSVP (WhatsApp) ---------- */
+  function setupRSVP() {
+    const form = $('#rsvpForm'), sel = $('#rGuests');
+    for (let i = 1; i <= CONFIG.maxGuests; i++) sel.add(new Option(i === 1 ? '1 (just me)' : String(i), String(i)));
+    $$('input[name=attending]', form).forEach((r) => r.addEventListener('change', () => {
+      const yes = form.attending.value === 'yes';
+      sel.disabled = !yes;
+      $('#guestsField').style.opacity = yes ? '1' : '.45';
+    }));
+    const call = $('#callBtn');
+    call.href = `tel:+${phoneDigits()}`;
+    call.addEventListener('click', (e) => { if (!phoneDigits()) { e.preventDefault(); toast('Phone number not set yet'); } });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();   // only what the guest typed (or chose to fill in)
+      if (!name) { form.name.focus(); toast('Please enter your name'); return; }
+      if (!phoneDigits()) { toast('Phone number not set yet'); return; }
+      const yes = form.attending.value === 'yes';
+      const msg = [
+        'Assalamu Alaikum! 🌙',
+        `RSVP for the wedding of ${CONFIG.bride.name} & ${CONFIG.groom.name}`,
+        '',
+        `Name: ${name}`,
+        `Attending: ${yes ? 'Yes, in sha Allah ✅' : 'Regretfully, no 🤲'}`,
+        yes ? `Number of guests: ${sel.value}` : null,
+        form.message.value.trim() ? `Message: ${form.message.value.trim()}` : null
+      ].filter((l) => l !== null).join('\n');
+      window.open(`https://wa.me/${phoneDigits()}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+  }
+
+  /* ---------- Hosts (with optional photos, staggered reveal) ---------- */
+  function renderHosts() {
+    const ul = $('#hosts');
+    const initialsOf = (name) => {
+      const words = name.split(/\s+/).filter((w) => !/^(haji|hajji|al|el|md\.?)$/i.test(w));
+      return ((words[0] || '')[0] || '') + (words.length > 1 ? words[words.length - 1][0] : '');
+    };
+    CONFIG.hosts.forEach((h, i) => {
+      const li = el('li', 'host' + (h.lead ? ' lead' : ''));
+      li.style.setProperty('--d', `${300 + i * 260}ms`);
+      if (h.photo != null) {
+        const frame = el('div', 'host-photo');
+        const inner = el('div', 'host-inner');
+        inner.appendChild(h.photo
+          ? photoImg({ src: h.photo, alt: h.name, focus: h.focus }, 'mono', false, initialsOf(h.name))
+          : placeholder('mono', initialsOf(h.name)));
+        frame.appendChild(inner);
+        li.appendChild(frame);
+      }
+      li.appendChild(el('span', 'host-name', h.name));
+      li.appendChild(el('span', 'host-rel', h.relation));
+      ul.appendChild(li);
+    });
+  }
+
+  /* ---------- Bottom navigation: animated glide + active-section indicator ---------- */
+  function setupNav() {
+    const bar = $('#quickbar'), pill = $('.qb-indicator', bar);
+    const tabs = $$('.qb-tab[data-target]', bar).filter((t) => {
+      const ok = !!document.getElementById(t.dataset.target);
+      if (!ok) t.remove();                         // e.g. gallery hidden → no Photos tab
+      return ok;
+    });
+    const sectionOf = (t) => document.getElementById(t.dataset.target);
+    // Layout position (offsetTop ignores the entrance transforms, e.g. a card still mid zoom-in)
+    const absTop = (n) => { let y = 0; for (; n; n = n.offsetParent) y += n.offsetTop; return y; };
+    const topOf = (s) => (s.id === 'hero' ? 0 : Math.max(0, absTop(s) - 18));
+    let active = null, gliding = false, raf = 0;
+
+    function setActive(tab) {
+      if (tab === active) return;
+      tabs.forEach((t) => { t.classList.toggle('active', t === tab); if (t === tab) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current'); });
+      active = tab;
+      movePill();
+    }
+    function movePill() {
+      if (!active) { pill.style.opacity = '0'; return; }
+      pill.style.width = active.offsetWidth + 'px';
+      pill.style.transform = `translateX(${active.offsetLeft}px)`;
+      pill.style.opacity = '1';
+    }
+
+    // Eased glide (cancelled by any touch, wheel or key so guests are never fighting the page)
+    function glideTo(y, done) {
+      cancelAnimationFrame(raf);
+      const startY = window.scrollY, dist = y - startY;
+      if (reduceMotion || Math.abs(dist) < 4) { window.scrollTo(0, y); done && done(); return; }
+      const dur = Math.min(A.navGlideMaxMs, Math.max(A.navGlideMinMs, Math.abs(dist) * A.navGlideMsPerPx));
+      const ease = (t) => -(Math.cos(Math.PI * t) - 1) / 2;   // easeInOutSine — soft start and soft landing
+      const t0 = performance.now();
+      gliding = true;
+      const stop = () => { gliding = false; cancelAnimationFrame(raf); off(); };
+      const off = () => ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach((ev) => window.removeEventListener(ev, stop));
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach((ev) => window.addEventListener(ev, stop, { passive: true, once: true }));
+      const step = (now) => {
+        const t = Math.min(1, (now - t0) / dur);
+        window.scrollTo(0, startY + dist * ease(t));
+        if (t < 1) raf = requestAnimationFrame(step);
+        else { gliding = false; off(); done && done(); }
+      };
+      raf = requestAnimationFrame(step);
+    }
+
+    tabs.forEach((tab) => tab.addEventListener('click', (e) => {
+      e.preventDefault();                           // keep the URL (and guest name) unchanged
+      const sec = sectionOf(tab);
+      setActive(tab);
+      glideTo(topOf(sec), () => {
+        // Re-measure in case images above finished loading, then a soft gold glow on arrival
+        const y = topOf(sec);
+        if (Math.abs(window.scrollY - y) > 30) window.scrollTo(0, y);
+        const glowEl = $('.card', sec) || sec;
+        glowEl.classList.remove('arrive-glow'); void glowEl.offsetWidth; glowEl.classList.add('arrive-glow');
+        setTimeout(() => glowEl.classList.remove('arrive-glow'), 1700);
+        sec.setAttribute('tabindex', '-1');
+        sec.focus({ preventScroll: true });          // keyboard / screen-reader users land in the section
+      });
+    }));
+
+    // Follow the guest's own scrolling: highlight the section they are reading
+    // (chosen by page position, since tab order differs from page order — RSVP sits above Photos)
+    function spy() {
+      if (gliding) return;
+      const line = window.scrollY + window.innerHeight * 0.4;
+      let current = tabs[0], best = -1;
+      tabs.forEach((t) => { const y = absTop(sectionOf(t)); if (y <= line && y > best) { best = y; current = t; } });
+      setActive(current);
+    }
+    let ticking = false;
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; spy(); }); } }, { passive: true });
+    window.addEventListener('resize', movePill);
+    return { refresh: () => { spy(); movePill(); } };
+  }
+
+  /* ---------- Share (always generic — guest name removed) ---------- */
+  function publicUrl() {
+    const u = new URL(window.location.href);
+    u.searchParams.delete(CONFIG.guest.param);
+    u.hash = '';
+    return u.toString();
+  }
+  async function share() {
+    const url = publicUrl();
+    const data = {
+      title: `${CONFIG.bride.name} & ${CONFIG.groom.name} — Wedding Invitation`,
+      text: `With the blessings of Allah, you are invited to the wedding of ${CONFIG.bride.name} & ${CONFIG.groom.name}.`,
+      url
+    };
+    if (navigator.share) {
+      try { await navigator.share(data); return; } catch (e) { if (e && e.name === 'AbortError') return; }
+    }
+    try { await navigator.clipboard.writeText(url); toast('Link copied'); }
+    catch (e) {
+      const ta = el('textarea'); ta.value = url; ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      const ok = document.execCommand('copy'); ta.remove();
+      toast(ok ? 'Link copied' : url);
+    }
+  }
+
+  /* ---------- Toast ---------- */
+  let toastTimer;
+  function toast(msg) {
+    const t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+  }
+
+  /* ---------- Pause decoration while the page is hidden ---------- */
+  document.addEventListener('visibilitychange', () => {
+    root.classList.toggle('paused', document.hidden);
+    if (document.hidden) stopPetals(); else if (opened) startPetals();
+    Music.onVisibility(document.hidden);
+  });
+
+  /* ---------- Init ---------- */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+
+  bindText();
+  renderGuest();
+  makeStars($('#introStars'), lite ? 18 : 32);
+  makeStars($('#bgStars'), lite ? 14 : 26);
+  renderPortrait();
+  renderEvents();
+  setupLocation();
+  renderCalendarButtons();
+  setupRSVP();
+  renderHosts();
+  setupGallery();
+  nav = setupNav();
+  setupCountdown();
+  setupReveal();
+
+  // While the doors are closed, the page behind them is inert (keeps focus in the intro)
+  $('#main').inert = true;
+  $('#quickbar').inert = true;
+  const intro = $('#intro');
+  intro.addEventListener('click', openInvitation);     // tap / click anywhere on the doors
+  $('#openBtn').addEventListener('keydown', (e) => {   // Enter / Space also work (native button)
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openInvitation(); }
+  });
+  $('#openBtn').focus({ preventScroll: true });
+  $('#musicBtn').addEventListener('click', () => Music.toggle());
+  $('#shareBtn').addEventListener('click', share);
+
+  window.__inviteReady = true;
+})();
+</script>
+
+<!-- =========================================================
+     PREVIEW: golden "swipe up to explore" hint (self-contained block)
+     Appears shortly after the doors open; hides on the first scroll.
+     ========================================================= -->
+<style>
+.scroll-hint {
+  position: fixed; z-index: 95; left: 50%; bottom: calc(92px + var(--safe-b));
+  display: flex; flex-direction: row; align-items: center; gap: 10px; white-space: nowrap;
+  padding: 7px 18px 7px 12px; border-radius: 999px; cursor: pointer;
+  background: rgba(3, 29, 26, .8); border: 1px solid rgba(200, 167, 96, .65);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .45), 0 0 18px rgba(236, 212, 138, .25);
+  color: var(--gold-light); font: 600 .72rem/1.2 var(--font-body); letter-spacing: .2em; text-transform: uppercase;
+  opacity: 0; transform: translate(-50%, 16px); pointer-events: none;
+  transition: opacity .7s ease, transform .7s var(--ease-out);
+}
+.scroll-hint.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.scroll-hint .track { position: relative; width: 26px; height: 34px; flex: none; }
+.scroll-hint .trail { /* faint gold line the finger travels along */
+  position: absolute; left: 50%; top: 2px; bottom: 6px; width: 2px; margin-left: -1px; border-radius: 2px;
+  background: linear-gradient(transparent, rgba(236, 212, 138, .7));
+  transform-origin: bottom; animation: hintTrail 1.8s ease-in-out infinite;
+}
+.scroll-hint svg {
+  position: absolute; left: 50%; bottom: -4px; width: 26px; height: 26px; margin-left: -10px;
+  color: #f3cf6a; filter: drop-shadow(0 0 6px rgba(255, 215, 120, .7));
+  animation: hintSwipe 1.8s ease-in-out infinite;
+}
+@keyframes hintSwipe {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 1; }
+  60%  { transform: translateY(-10px); opacity: 1; }
+  85%, 100% { transform: translateY(-10px); opacity: 0; }
+}
+@keyframes hintTrail { 0%, 15% { transform: scaleY(0); opacity: 0; } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .scroll-hint svg { opacity: 1; } }
+</style>
+<button class="scroll-hint" id="scrollHint" type="button" aria-label="Scroll down to see the wedding details">
+  <span class="track" aria-hidden="true">
+    <span class="trail"></span>
+    <!-- golden pointing hand -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 13V4.5a1.5 1.5 0 0 1 3 0V11"/>
+      <path d="M12 10.5a1.5 1.5 0 0 1 3 0V12"/>
+      <path d="M15 11.5a1.5 1.5 0 0 1 3 0v1"/>
+      <path d="M18 13a1.5 1.5 0 0 1 3 0v2.8c0 3.4-2.7 6.2-6.1 6.2h-1.2a5.8 5.8 0 0 1-4.6-2.3L5.6 15.9a1.7 1.7 0 0 1 2.6-2.2L9 14.6"/>
+    </svg>
+  </span>
+  <span id="scrollHintText">Swipe up to explore</span>
+</button>
+<script>
+(() => {
+  const hint = document.getElementById('scrollHint');
+  if (!hint) return;
+  // Mouse users read "Scroll", touch users read "Swipe up"
+  if (!matchMedia('(pointer: coarse)').matches) document.getElementById('scrollHintText').textContent = 'Scroll to explore';
+  let shown = false, done = false, timer;
+  const hide = () => { if (done) return; done = true; hint.classList.remove('show'); clearTimeout(timer); setTimeout(() => hint.remove(), 800); };
+  const show = () => {
+    if (done || shown || window.scrollY > 60) return;
+    shown = true; hint.classList.add('show');
+    timer = setTimeout(hide, 14000);            // fades away by itself after a while
+  };
+  // Wait for the doors to finish opening, then a short pause so the hero is seen first
+  const watch = new MutationObserver(() => {
+    if (document.body.classList.contains('opened')) { watch.disconnect(); setTimeout(show, 2200); }
+  });
+  watch.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  window.addEventListener('scroll', () => { if (window.scrollY > 60) hide(); }, { passive: true });
+  // Tapping the hint gently scrolls down to the next section
+  hint.addEventListener('click', () => {
+    const next = document.querySelector('#hero + section') || document.querySelector('main section:nth-of-type(2)');
+    hide();
+    if (next) next.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  });
+})();
+</script>
+</body>
+</html>
