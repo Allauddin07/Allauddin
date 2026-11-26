@@ -1341,9 +1341,9 @@ const CONFIG = {
   countdownTo: '2027-05-23T13:30',         // Nikah (24h local time)
 
   events: [
-    { id: 'mehndi', title: 'Mehndi', icon: 'i-mehndi', start: '2027-05-22T17:00', timeSuffix: 'onwards', note: '' },
-    { id: 'nikah',  title: 'Nikah',  icon: 'i-nikah',  start: '2027-05-23T23:30', timeSuffix: 'onwards',        note: 'After Isha prayer' }
-    // { id: 'walima', title: 'Walima', icon: 'i-walima', start: '2027-05-25T18:00', timeSuffix: 'onwards',        note: 'Dinner' }
+    { id: 'mehndi', title: 'Haldi Ceremony', icon: 'i-mehndi', start: '2027-05-22T17:00', timeSuffix: 'onwards', note: '' },
+    { id: 'nikah',  title: 'Nikah Ceremony',  icon: 'i-nikah',  start: '2027-05-23T23:30', timeSuffix: 'onwards',        note: 'After Isha prayer' }
+    // { id: 'walima', title: 'Walima Reception', icon: 'i-walima', start: '2027-05-25T18:00', timeSuffix: 'onwards',        note: 'Dinner' }
   ],
   /* Calendar files need an end time. No end times were provided, so each event uses this
      length unless you add `end: 'YYYY-MM-DDTHH:MM'` to an event above. */
@@ -1365,7 +1365,32 @@ const CONFIG = {
     mapQuery: '24.146259,85.973083'
   },
 
-  phone: '[bride side phone — TEST]',      // ⚠ TEST — digits with country code, e.g. '919876543210'
+  // Cinematic "Earth zoom": a 3D globe dives from space down to the venue pin
+  // (plays once when the map scrolls into view; skipped for reduced motion / slow phones)
+  earthZoom: {
+    enabled: true,
+    startLng: 30, startLat: 12,     // where the globe starts before it turns to India
+    flyMs: 6500,                    // length of the dive from space to the roof
+    holdMs: 1800,                   // pause on the pin before the normal map appears
+    // Captions shown as the camera passes each zoom level
+    captions: [
+      { zoom: 0,  text: 'India' },
+      { zoom: 5,  text: 'Jharkhand' },
+      { zoom: 9,  text: 'Giridih' },
+      { zoom: 12, text: 'Kheskari' },
+      { zoom: 15, text: 'Masud — Palace' }
+    ]
+  },
+
+  // Gentle scrolling after the doors open: slows down finger / mouse-wheel scrolling
+  // and adds a soft glide. Turned off automatically for reduced motion and slow phones.
+  gentleScroll: {
+    enabled: true,
+    speed: 0.6,        // 1 = normal phone speed, 0.6 = 40% slower, 0.4 = much slower
+    smoothness: 0.06   // glide after lifting the finger: lower = longer and softer (0.04–0.1)
+  },
+
+  phone: '9182210259671',      // ⚠ TEST — digits with country code, e.g. '919876543210'
   maxGuests: 10,
 
   /* Shown in "Eagerly Awaiting Your Presence". `photo` = file in the images folder
@@ -1374,9 +1399,11 @@ const CONFIG = {
   // ⚠ TEST DATA — the bride's family (replace names; add photos to the images folder)
   hosts: [
     { name: 'Masud Ansari',             relation: 'Father of the Bride',  photo: 'images/bride-father.jpg',   focus: '50% 25%' },
-    { name: '[Mother\'s name — TEST]',  relation: 'Mother of the Bride',  photo: 'images/bride-mother.jpg',   focus: '50% 25%' },
-    { name: 'Ali Ansari', relation: 'Brother of the Bride', photo: 'images/bride-brother1.jpg', focus: '50% 25%' },
-    { name: 'Nagma Ansari',  relation: 'Sister of the Bride',  photo: 'images/bride-sister1.jpg',  focus: '50% 25%' }
+    { name: 'Tabassum Bano',  relation: 'Mother of the Bride',  photo: 'images/bride-mother.jpg',   focus: '50% 25%' },
+    { name: 'Mohammad Ali', relation: 'Brother of the Bride', photo: 'images/bride-brother1.jpg', focus: '50% 25%' },
+     { name: 'Ahmed Ansari', relation: 'Brother in law of the Bride', photo: 'images/bride-brother1.jpg', focus: '50% 25%' },
+    { name: 'Nagma Ansari',  relation: 'Sister of the Bride',  photo: 'images/bride-sister1.jpg',  focus: '50% 25%' },
+    { name: 'Nafisha Nancy',  relation: 'Sister of the Bride',  photo: 'images/bride-sister1.jpg',  focus: '50% 25%' }
   ],
 
   /* PHOTOS — put the files in the "images" folder next to this HTML, using these names.
@@ -2381,6 +2408,7 @@ const CONFIG = {
     // Eased glide (cancelled by any touch, wheel or key so guests are never fighting the page)
     function glideTo(y, done) {
       cancelAnimationFrame(raf);
+      if (window.gentleScroll) window.gentleScroll.scrollTo(window.scrollY, { immediate: true, force: true });  // drop any leftover swipe momentum
       const startY = window.scrollY, dist = y - startY;
       if (reduceMotion || Math.abs(dist) < 4) { window.scrollTo(0, y); done && done(); return; }
       const dur = Math.min(A.navGlideMaxMs, Math.max(A.navGlideMinMs, Math.abs(dist) * A.navGlideMsPerPx));
@@ -2583,6 +2611,262 @@ const CONFIG = {
     hide();
     if (next) next.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   });
+})();
+</script>
+<!-- =====================================================================
+     EARTH ZOOM (cinematic): a 3D satellite globe that dives from space
+     to the venue, then fades into the normal interactive map.
+     Settings live in CONFIG.earthZoom. Self-contained: remove this whole
+     block to switch the feature off completely.
+     ===================================================================== -->
+<style>
+.ez {
+  position: absolute; inset: 0; z-index: 1200; overflow: hidden;
+  /* deep space with a few painted stars behind the globe */
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 78% 12%, #f8e7b0 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 30% 82%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 66%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 52% 8%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 6% 58%, #f8e7b0 50%, transparent 51%),
+    radial-gradient(1px 1px at 64% 92%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 94% 34%, #fff 50%, transparent 51%),
+    radial-gradient(ellipse at 50% 55%, #0c1f2e 0%, #02060c 70%);
+  opacity: 0; transition: opacity .8s ease;
+}
+.ez.show { opacity: 1; }
+.ez.out { opacity: 0; transition-duration: 1.2s; }
+.ez .ez-map { position: absolute; inset: 0; }
+.ez .ez-map canvas { outline: none; }
+/* cinematic letterbox bars */
+.ez::before, .ez::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 9%; background: #000; z-index: 3;
+  transform: scaleY(0); transition: transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.ez::before { top: 0; transform-origin: top; }
+.ez::after { bottom: 0; transform-origin: bottom; }
+.ez.show::before, .ez.show::after { transform: scaleY(1); }
+.ez.out::before, .ez.out::after { transform: scaleY(0); }
+.ez-cap {
+  position: absolute; left: 0; right: 0; bottom: 19%; z-index: 4; text-align: center; pointer-events: none;
+  font-family: var(--font-display, 'Cormorant Garamond', serif); font-size: clamp(20px, 6vw, 30px); letter-spacing: .14em;
+  text-transform: uppercase; color: #f5d98a; text-shadow: 0 0 14px rgba(0,0,0,.9), 0 0 24px rgba(201,162,58,.55);
+  opacity: 0; transform: translateY(8px); transition: opacity .5s ease, transform .5s ease;
+}
+.ez-cap.on { opacity: 1; transform: none; }
+.ez-skip {
+  position: absolute; top: calc(9% + 8px); right: 10px; z-index: 5; cursor: pointer;
+  font: 600 12px/1 var(--font-body, sans-serif); letter-spacing: .08em; color: #f5d98a;
+  background: rgba(0,0,0,.45); border: 1px solid rgba(201,162,58,.7); border-radius: 999px; padding: 7px 12px;
+}
+.ez-pin { width: 40px; height: 52px; animation: ezDrop .7s cubic-bezier(.3,1.5,.5,1) both; transform-origin: 50% 100%; }
+@keyframes ezDrop { from { transform: translateY(-60px) scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+.ez .maplibregl-ctrl-attrib { font-size: 9px; background: rgba(0,0,0,.4); }
+.ez .maplibregl-ctrl-bottom-right { bottom: 9%; z-index: 4; }
+.ez .maplibregl-ctrl-attrib a, .ez .maplibregl-ctrl-attrib { color: #ddd; }
+.ez-replay {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; cursor: pointer;
+  font: 600 13px/1 var(--font-body, sans-serif); color: var(--gold, #c9a23a);
+  background: transparent; border: 1px solid currentColor; border-radius: 999px; padding: 9px 16px;
+}
+.ez-replay[hidden] { display: none; }
+</style>
+<script>
+(function earthZoom() {
+  const S = CONFIG.earthZoom, v = CONFIG.venue;
+  const frame = document.querySelector('#location .map-frame');
+  if (!S || !S.enabled || !frame || v.lat == null || v.lng == null) return;
+  // Respect reduced motion, lite mode (slow / small phones) and Data Saver
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (document.documentElement.classList.contains('lite')) return;
+  // Needs WebGL for the 3D globe
+  try { const c = document.createElement('canvas'); if (!(c.getContext('webgl2') || c.getContext('webgl'))) return; } catch (e) { return; }
+
+  const VER = '5.24.1';
+  let libPromise = null;
+  const loadLib = () => libPromise || (libPromise = new Promise((resolve, reject) => {
+    if (window.maplibregl) { resolve(); return; }
+    const css = document.createElement('link');
+    css.rel = 'stylesheet'; css.crossOrigin = '';
+    css.href = `https://unpkg.com/maplibre-gl@${VER}/dist/maplibre-gl.css`;
+    css.integrity = 'sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK';
+    document.head.appendChild(css);
+    const js = document.createElement('script');
+    js.src = `https://unpkg.com/maplibre-gl@${VER}/dist/maplibre-gl.js`;
+    js.integrity = 'sha384-nXMl9YiLoSG5KBPTFgvxVuIqQQcqIvo0bFrvoEaGJC6r7IibIzF1S36Zbf/sKBtL';
+    js.crossOrigin = '';
+    js.onload = () => (window.maplibregl ? resolve() : reject());
+    js.onerror = reject;
+    document.head.appendChild(js);
+    setTimeout(reject, 15000);   // very slow network: keep the normal map only
+  }));
+
+  // "Replay" button under the map (appears after the first play)
+  const replay = document.createElement('button');
+  replay.type = 'button'; replay.className = 'ez-replay'; replay.hidden = true;
+  replay.textContent = '🌍 Replay Earth zoom';
+  frame.insertAdjacentElement('afterend', replay);
+
+  let playing = false;
+  const frameVisible = () => {
+    const r = frame.getBoundingClientRect();
+    return r.top < innerHeight * 0.85 && r.bottom > innerHeight * 0.15;
+  };
+
+  function play() {
+    if (playing) return;
+    playing = true; replay.hidden = true;
+    const ez = document.createElement('div');
+    ez.className = 'ez'; ez.setAttribute('role', 'img');
+    ez.setAttribute('aria-label', `Animation zooming from the Earth to ${v.pinLabel || v.name}`);
+    const mapEl = document.createElement('div'); mapEl.className = 'ez-map';
+    const cap = document.createElement('div'); cap.className = 'ez-cap'; cap.setAttribute('aria-hidden', 'true');
+    const skip = document.createElement('button'); skip.type = 'button'; skip.className = 'ez-skip'; skip.textContent = 'Skip ›';
+    ez.append(mapEl, cap, skip);
+    frame.appendChild(ez);
+
+    const small = frame.clientWidth < 500;
+    const map = new maplibregl.Map({
+      container: mapEl,
+      style: {
+        version: 8,
+        projection: { type: 'globe' },
+        sky: { 'atmosphere-blend': ['interpolate', ['linear'], ['zoom'], 0, 1, 5, 1, 8, 0] },
+        sources: {
+          sat: {
+            type: 'raster', tileSize: 256, maxzoom: 18,
+            tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+            attribution: 'Imagery © Esri'
+          }
+        },
+        layers: [{ id: 'sat', type: 'raster', source: 'sat' }]
+      },
+      center: [S.startLng, S.startLat],
+      zoom: small ? 0.35 : 1,
+      interactive: false,
+      attributionControl: { compact: true },
+      fadeDuration: 0
+    });
+
+    // Captions change as the camera passes each zoom level
+    const caps = (S.captions || []).slice().sort((a, b) => a.zoom - b.zoom);
+    let shown = '';
+    const setCap = (t) => {
+      if (t === shown) return;
+      shown = t; cap.classList.remove('on');
+      setTimeout(() => { cap.textContent = t; if (t) cap.classList.add('on'); }, 220);
+    };
+    const onZoom = () => {
+      const z = map.getZoom(); let t = '';
+      caps.forEach((c) => { if (z >= c.zoom) t = c.text; });
+      setCap(t);
+    };
+
+    const timers = [];
+    let ended = false;
+    const finish = () => {
+      if (ended) return; ended = true;
+      timers.forEach(clearTimeout);
+      ez.classList.add('out');
+      setTimeout(() => { map.remove(); ez.remove(); playing = false; replay.hidden = false; }, 1300);
+    };
+    skip.addEventListener('click', finish);
+
+    map.on('error', () => {});      // a missing tile should never stop the show
+    map.once('load', () => {
+      requestAnimationFrame(() => ez.classList.add('show'));
+      // 1) Turn the globe to India
+      timers.push(setTimeout(() => {
+        if (ended) return;
+        map.easeTo({ center: [v.lng, v.lat], zoom: small ? 1.1 : 1.8, duration: 2200, easing: (t) => t * (2 - t) });
+        setCap(caps[0] ? caps[0].text : '');
+      }, 600));
+      // 2) Dive from space to the roof
+      timers.push(setTimeout(() => {
+        if (ended) return;
+        map.on('zoom', onZoom);
+        map.flyTo({ center: [v.lng, v.lat], zoom: Math.min(v.mapZoom || 17, 17.5), duration: S.flyMs, curve: 1.5, essential: true });
+        map.once('moveend', () => {
+          if (ended) return;
+          // 3) Drop the gold venue pin, hold, then reveal the normal map underneath
+          const pin = document.createElement('div');
+          pin.innerHTML = '<svg class="ez-pin" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 1C9.5 1 1 9.3 1 19.6 1 33 20 51 20 51s19-18 19-31.4C39 9.3 30.5 1 20 1z" fill="#0b3d2e" stroke="#c9a23a" stroke-width="2"/><circle cx="20" cy="19" r="11" fill="#fbf6ea"/><path d="M22.6 11.5a8 8 0 1 0 4.9 13 6.6 6.6 0 1 1-4.9-13z" fill="#c9a23a"/></svg>';
+          new maplibregl.Marker({ element: pin, anchor: 'bottom' }).setLngLat([v.lng, v.lat]).addTo(map);
+          timers.push(setTimeout(finish, S.holdMs));
+        });
+      }, 3000));
+    });
+    // Safety net: never leave the overlay stuck
+    timers.push(setTimeout(finish, 3000 + S.flyMs + S.holdMs + 6000));
+  }
+
+  replay.addEventListener('click', () => loadLib().then(play).catch(() => {}));
+
+  if (!('IntersectionObserver' in window)) return;
+  // Fetch the library a little before the venue is reached...
+  const pre = new IntersectionObserver((es) => {
+    if (es.some((e) => e.isIntersecting)) { pre.disconnect(); loadLib().catch(() => {}); }
+  }, { rootMargin: '900px 0px' });
+  pre.observe(frame);
+  // ...and play once when most of the map is on screen
+  const io = new IntersectionObserver((es) => {
+    if (!es.some((e) => e.isIntersecting)) return;
+    io.disconnect();
+    loadLib().then(() => { if (frameVisible()) play(); else replay.hidden = false; })
+             .catch(() => {});
+  }, { threshold: 0.6 });
+  io.observe(frame);
+})();
+</script>
+<!-- =====================================================================
+     GENTLE SCROLL: slower, softer scrolling once the invitation is open
+     (Lenis, a small smooth-scroll library). Settings: CONFIG.gentleScroll.
+     Self-contained: remove this block to restore normal phone scrolling.
+     ===================================================================== -->
+<style>
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
+</style>
+<script>
+(function gentleScroll() {
+  const S = CONFIG.gentleScroll;
+  if (!S || !S.enabled) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const lite = () => document.documentElement.classList.contains('lite');
+
+  let started = false;
+  const start = () => {
+    if (started) return; started = true;
+    const js = document.createElement('script');
+    js.src = 'https://unpkg.com/lenis@1.3.28/dist/lenis.min.js';
+    js.integrity = 'sha384-dfVjORqODkxAh3ECkcX+hquq/NhHWpbxW8/WemeXIqtUT5p2BSI9GAWWSUbTpJ3m';
+    js.crossOrigin = '';
+    js.onload = () => {
+      if (!window.Lenis) return;
+      window.gentleScroll = new Lenis({
+        autoRaf: true,
+        lerp: S.smoothness,
+        wheelMultiplier: S.speed,
+        touchMultiplier: S.speed,
+        syncTouch: !lite(),            // slow phones keep their normal (native) touch scrolling
+        syncTouchLerp: S.smoothness
+      });
+      // While the photo viewer is open, freeze the page underneath (and release it on close)
+      new MutationObserver(() => {
+        if (document.body.classList.contains('lb-open')) window.gentleScroll.stop();
+        else window.gentleScroll.start();
+      }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    };
+    document.head.appendChild(js);      // if it fails to load, normal scrolling simply stays
+  };
+
+  // Begin only after the doors have opened (the page is locked before that)
+  if (document.body.classList.contains('opened')) start();
+  else new MutationObserver((m, mo) => {
+    if (document.body.classList.contains('opened')) { mo.disconnect(); start(); }
+  }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 })();
 </script>
 </body>
